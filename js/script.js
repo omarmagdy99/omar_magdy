@@ -152,10 +152,13 @@ $(document).ready(function () {
         console.error('Action:', e.action);
         console.error('Trigger:', e.trigger);
     });
-    // $(function () {
-
-    //     $('.example-popover').popover('toggleEnabled')
-    // })
-    // $('.example-popover').on(' hidden.bs.popover', function () {
-    // })
+    // scroll
+    $(function() {  
+        $("body").niceScroll({
+            zindex:4,
+            cursorcolor: "#109AF2",
+            cursorborder: "none",
+            cursorwidth: "9px"
+        });
+    });
 })

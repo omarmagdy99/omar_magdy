@@ -1,5 +1,5 @@
 *{
-    transition: all 1s;
+    transition: color 1s,background-color 1s;
 }
 
 nav>div>ul>li>a.active-color {
@@ -61,7 +61,10 @@ nav>div>ul>li>a:hover {
 #sec5-port .bg-hover:hover {
     background-color: #0099ff75;
     color: white;
-
+    
+}
+#sec5-port .i-hover,#sec5-port .i-hover i{
+    transition: none;
 
 }
 .hire-me {
@@ -82,4 +85,7 @@ nav>div>ul>li>a:hover {
 }
 #sec5-port .bg-hover:hover {
     background-color: #0099ff75;
+}
+.last-sec i{
+    color: #109af7;
 }

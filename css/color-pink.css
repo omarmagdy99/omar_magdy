@@ -1,6 +1,11 @@
 *{
     transition: all 1s;
 }
+#sec5-port .i-hover,#sec5-port .i-hover i{
+    transition: none;
+
+}
+
 nav>div>ul>li>a.active-color {
     color: #FF1493	;
 }
@@ -74,4 +79,7 @@ nav>div>ul>li>a:hover {
 }
 .btn-top {
     background-color: #FF1493;
+}
+.last-sec i{
+    color: #FF1493;
 }

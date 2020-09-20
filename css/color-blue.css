@@ -1,0 +1,85 @@
+*{
+    transition: all 1s;
+}
+
+nav>div>ul>li>a.active-color {
+    color: #109AF2;
+}
+h2{
+    border-bottom: 4px solid #109AF2;
+}
+.a-more:hover {
+    border-color: #109AF2;
+
+}
+.a-more:hover {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #00c6ff, #0072ff);
+
+}
+#sec2-me>div>div>div>a.a-more {
+    color: #109AF2;
+    border: 2px solid #109AF2;
+
+}
+#sec2-me h3 {
+    color: #109AF2;
+}
+.details h3 {
+    border-bottom: 3px solid #109AF2;
+}
+#ch-color .btn-box-color {
+    background-color: #109af7;
+}
+nav>a.navbar-brand {
+    border: 4px solid #109af7;
+
+}
+nav>a:hover,
+nav>div>ul>li>a:hover {
+    color: #109af7;
+
+}
+.success-stroke {
+    stroke: #0075ff;
+}
+
+.circle-chart__background {
+    stroke: #00c4ff
+}
+.skill-bottom .row i {
+    color: #109af7;
+}
+#sec4-services i {
+    color: #109af7;
+
+}
+.class-border:hover {
+    border-color: #109af7;
+    background-color: white;
+
+}
+#sec5-port .bg-hover:hover {
+    background-color: #0099ff75;
+    color: white;
+
+
+}
+.hire-me {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #00c6ff, #0072ff);
+}
+.hire-me>div>a:hover {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, white, white);
+    color: #109af7;
+}
+.contact-a:hover {
+    color: #109af7;
+}
+.btn-top {
+    background-color: #109af7;
+}
+.hire-me {
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #00c6ff, #0072ff);
+}
+#sec5-port .bg-hover:hover {
+    background-color: #0099ff75;
+}

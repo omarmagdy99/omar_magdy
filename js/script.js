@@ -37,8 +37,16 @@ $(document).ready(function () {
     // color box
     
     $(".btn-box-color").click(function(){
-        // $("#ch-color").css('left' ,'-202px');
         $("#ch-color").toggleClass('ch-color-show');
+    })
+    $('.btn-box-pink').click(function(){
+
+        $("#css-color").attr("href", "css/color-pink.css");
+        
+    })
+    $('.btn-box-blue').click(function(){
+        
+        $("#css-color").attr("href", "css/color-blue.css");
     })
 
     // scroll---------------
@@ -162,7 +170,6 @@ $(document).ready(function () {
     $(function() {  
         $("body").niceScroll({
             zindex:4,
-            cursorcolor: "#109AF2",
             cursorborder: "none",
             cursorwidth: "9px"
         });

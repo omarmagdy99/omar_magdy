@@ -3,13 +3,10 @@
 
 }
 
-nav>div>ul>li>a.active-color {
-    color: #109AF2;
-}
 
 h2 {
     border-top: 4px solid black;
-    border-bottom: 4px solid #109AF2;
+
     font-weight: 700;
     display: inline-block;
     padding: 4px 0px;
@@ -38,8 +35,6 @@ a.a-more {
 
 .a-more:hover {
     text-decoration: none;
-    border-color: #109AF2;
-    background: rgba(0, 0, 0, 0) linear-gradient(to right, #00c6ff, #0072ff);
     text-decoration: none;
 
 }
@@ -57,14 +52,12 @@ a.a-more {
 #ch-color li {
     width: 30px;
     height: 30px;
-    background-color: blue;
 }
 
 #ch-color .btn-box-color {
     left: 210px;
     top: 2px;
     color: white;
-    background-color: #109af7;
     padding: 9px;
 }
 #ch-color i{
@@ -91,6 +84,12 @@ animation-timing-function: linear;
 .ch-color-show {
     left: 0;
 }
+.btn-box-pink{
+    background-color: #FF1493;
+}
+.btn-box-blue{
+    background-color: #109af7;
+}
 
 /* start nav bar */
 nav {
@@ -106,7 +105,6 @@ nav ul>li>a {
 
 nav>a.navbar-brand {
     font-size: x-large;
-    border: 4px solid #109af7;
 
 }
 
@@ -132,11 +130,6 @@ nav>div>ul>li>a {
 
 }
 
-nav>a:hover,
-nav>div>ul>li>a:hover {
-    color: #109af7;
-
-}
 
 
 /* start section 1 */
@@ -185,8 +178,6 @@ span {
 /* start section 2 */
 
 #sec2-me>div>div>div>a.a-more {
-    color: #109AF2;
-    border: 2px solid #109AF2;
     font-weight: 400;
     font-size: large;
 }
@@ -202,7 +193,6 @@ span {
 }
 
 #sec2-me h3 {
-    color: #109AF2;
     font-weight: 700;
 }
 
@@ -221,13 +211,6 @@ span {
 
 /* start section 3 skills */
 
-.success-stroke {
-    stroke: #0075ff;
-}
-
-.circle-chart__background {
-    stroke: #00c4ff
-}
 
 .skill-bottom {
     background-image: url(../pic/cat-2.jpg);
@@ -249,7 +232,6 @@ span {
 
 .skill-bottom .row i {
     font-size: 55px;
-    color: #109af7;
 
 }
 
@@ -263,7 +245,6 @@ span {
 /* start section 4 services */
 #sec4-services i {
     font-size: 50px;
-    color: #109af7;
 
 
 }
@@ -278,11 +259,6 @@ span {
     font-size: larger;
 }
 
-.class-border:hover {
-    border-color: #109af7;
-    background-color: white;
-
-}
 
 /*end section 4 services */
 
@@ -308,7 +284,6 @@ span {
 }
 
 #sec5-port .bg-hover:hover {
-    background-color: #0099ff75;
     color: white;
 
 
@@ -320,9 +295,6 @@ span {
     height: 100vh;
 }
 
-.hire-me {
-    background: rgba(0, 0, 0, 0) linear-gradient(to right, #00c6ff, #0072ff);
-}
 
 .hire-me>div>a {
     font-weight: 300;
@@ -331,10 +303,6 @@ span {
 
 }
 
-.hire-me>div>a:hover {
-    background: rgba(0, 0, 0, 0) linear-gradient(to right, white, white);
-    color: #109af7;
-}
 
 
 /* end section 5 portfolio */
@@ -375,13 +343,11 @@ span {
 }
 
 .contact-a:hover {
-    color: #109af7;
     text-decoration: none;
 }
 
 .details h3 {
     font-size: larger;
-    border-bottom: 3px solid #109AF2;
     display: inline-block;
     color: white;
 
@@ -406,7 +372,6 @@ span {
     bottom: -85px;
     right: 20px;
     color: white;
-    background-color: #109af7;
     z-index: 20;
     transition: all 1s;
 }

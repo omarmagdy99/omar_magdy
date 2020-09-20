@@ -45,8 +45,52 @@ a.a-more {
 }
 
 
+/* color box */
+#ch-color {
+    width: 210px;
+    padding-top: 18px;
+    top: 130px;
+    z-index: 11;
+    transition: all 1s;
+}
 
+#ch-color li {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+}
 
+#ch-color .btn-box-color {
+    left: 210px;
+    top: 2px;
+    color: white;
+    background-color: #109af7;
+    padding: 9px;
+}
+#ch-color i{
+animation-name: spin;
+animation-duration: 5000ms;
+animation-iteration-count: infinite;
+animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+.ch-color-hide {
+
+    left: -214px;
+}
+
+.ch-color-show {
+    left: 0;
+}
 
 /* start nav bar */
 nav {
@@ -193,7 +237,8 @@ span {
     position: relative;
 }
 
-.skill-bottom .cover,#foot-contact .cover {
+.skill-bottom .cover,
+#foot-contact .cover {
     top: 0;
     left: 0;
     width: 100%;
@@ -295,38 +340,46 @@ span {
 /* end section 5 portfolio */
 
 /* start section 6 contact */
-#foot-contact{
+#foot-contact {
     background-image: url(../pic/contact.jpg);
     background-attachment: fixed;
     background-size: cover;
 
 }
-#foot-contact .contact-body{
+
+#foot-contact .contact-body {
     z-index: 1;
 
 }
-#foot-contact h2{
+
+#foot-contact h2 {
     border-top-color: white;
     font-size: xxx-large;
 }
-#foot-contact input,#foot-contact textarea{
+
+#foot-contact input,
+#foot-contact textarea {
     background-color: rgba(226, 226, 240, 0.18);
     color: white;
 
 }
-.details{
+
+.details {
     color: #ddd;
 }
-.contact-a{
+
+.contact-a {
     color: #ddd;
     transition: all 1s;
     cursor: pointer;
 }
-.contact-a:hover{
+
+.contact-a:hover {
     color: #109af7;
     text-decoration: none;
 }
-.details h3{
+
+.details h3 {
     font-size: larger;
     border-bottom: 3px solid #109AF2;
     display: inline-block;
@@ -334,14 +387,16 @@ span {
 
 
 }
+
 /* end section 6 contact */
- /* strat last section  */
- .last-sec a:hover{
-text-decoration: none;
-color: black;
-transition: all .7s;
-     
+/* strat last section  */
+.last-sec a:hover {
+    text-decoration: none;
+    color: black;
+    transition: all .7s;
+
 }
+
 /* end last section  */
 
 /* start button top */
@@ -360,19 +415,21 @@ transition: all .7s;
     top: 24px;
     font-size: x-large;
 }
+
 /* end button top */
 
 /* start section laoding */
-.laoding{
+.laoding {
     left: 0;
     top: 0;
     z-index: 9999;
     width: 100%;
-    height:100%;
+    height: 100%;
     background-color: #109af7;
-    transition:all 1s;
+    transition: all 1s;
 }
-.laoding div{
+
+.laoding div {
     top: 45%;
 }
 

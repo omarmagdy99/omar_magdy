@@ -34,6 +34,12 @@ $(document).ready(function () {
             $('nav').removeClass('navbar-shrink');
         }
     })
+    // color box
+    
+    $(".btn-box-color").click(function(){
+        // $("#ch-color").css('left' ,'-202px');
+        $("#ch-color").toggleClass('ch-color-show');
+    })
 
     // scroll---------------
     $(window).scroll(function () {

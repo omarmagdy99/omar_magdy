@@ -14,9 +14,9 @@ $(document).ready(function () {
     });
     $('nav  a').click(function(e){
         e.preventDefault();
-        console.log($('#'+$(this).data('scroll')).offset().top)
+         $btn_scrol= ($('#'+ $(this).data('scroll')).offset().top)-80;
         $('html,body').animate({
-            scrollTop : $('#'+ $(this).data('scroll')).offset().top
+            scrollTop : $btn_scrol
         },2000)
     })
 
@@ -70,31 +70,31 @@ $(document).ready(function () {
 
         // a active
         // about
-        if (($(this).scrollTop() >= $('#sec2-me').offset().top) && ($(this).scrollTop() <= $('#sec3-skill').offset().top)) {
+        if (($(this).scrollTop() >= ($('#sec2-me').offset().top)-77) && ($(this).scrollTop() <= ($('#sec3-skill').offset().top)-76)) {
             $('.about').addClass('active-color')
         } else {
             $('.about').removeClass('active-color')
         }
         // slills
-        if (($(this).scrollTop() >= $('#sec3-skill').offset().top) && ($(this).scrollTop() <= $('#sec4-services').offset().top)) {
+        if (($(this).scrollTop() >= ($('#sec3-skill').offset().top)+77) && ($(this).scrollTop() <= ($('#sec4-services').offset().top)-76)) {
             $('.skills').addClass('active-color')
         } else {
             $('.skills').removeClass('active-color')
         }
         // services
-        if (($(this).scrollTop() >= $('#sec4-services').offset().top) && ($(this).scrollTop() <= $('#sec5-port').offset().top)) {
+        if (($(this).scrollTop() >= ($('#sec4-services').offset().top)+77) && ($(this).scrollTop() <= ($('#sec5-port').offset().top)-76)) {
             $('.services').addClass('active-color')
         } else {
             $('.services').removeClass('active-color')
         }
         // portfolio
-        if (($(this).scrollTop() >= $('#sec5-port').offset().top) && ($(this).scrollTop() <= $('#foot-contact').offset().top)) {
+        if (($(this).scrollTop() >= ($('#sec5-port').offset().top)-77) && ($(this).scrollTop() <= ($('#foot-contact').offset().top)-76)) {
             $('.portfolio').addClass('active-color')
         } else {
             $('.portfolio').removeClass('active-color')
         }
         // contact
-        if ($(this).scrollTop() >= $('#foot-contact').offset().top) {
+        if ($(this).scrollTop() >= ($('#foot-contact').offset().top)-77) {
             $('.contact').addClass('active-color')
         } else {
             $('.contact').removeClass('active-color')
@@ -118,26 +118,6 @@ $(document).ready(function () {
     $('.home').click(function () {
         $('body,html').animate({ scrollTop: 0 }, 1000);
     })
-    // // about
-    // $('.about').click(function () {
-    //     $('body,html').animate({ scrollTop: 710 }, 1000);
-    // })
-    // // skills
-    // $('.skills').click(function () {
-    //     $('body,html').animate({ scrollTop: 1450 }, 1000);
-    // })
-    // // services
-    // $('.services').click(function () {
-    //     $('html,body').animate({ scrollTop: 2800 }, 1000);
-    // })
-    // // portfolio
-    // $('.portfolio').click(function () {
-    //     $('html,body').animate({ scrollTop: 3400 }, 1000);
-    // })
-    // // contact
-    // $('.contact').click(function () {
-    //     $('html,body').animate({ scrollTop: 4570 }, 1000);
-    // })
 
 
     $(function () {

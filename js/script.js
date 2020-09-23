@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
     $('nav  a').click(function(e){
         e.preventDefault();
-         $btn_scrol= ($('#'+ $(this).data('scroll')).offset().top)-80;
+         $btn_scrol= $('#'+ $(this).data('scroll')).offset().top-77;
         $('html,body').animate({
             scrollTop : $btn_scrol
         },2000)
@@ -70,31 +70,31 @@ $(document).ready(function () {
 
         // a active
         // about
-        if (($(this).scrollTop() >= ($('#sec2-me').offset().top)-77) && ($(this).scrollTop() <= ($('#sec3-skill').offset().top)-76)) {
+        if (($(this).scrollTop() >= ($('#sec2-me').offset().top)-80) && ($(this).scrollTop() <= ($('#sec3-skill').offset().top)-82)) {
             $('.about').addClass('active-color')
         } else {
             $('.about').removeClass('active-color')
         }
         // slills
-        if (($(this).scrollTop() >= ($('#sec3-skill').offset().top)+77) && ($(this).scrollTop() <= ($('#sec4-services').offset().top)-76)) {
+        if (($(this).scrollTop() >= ($('#sec3-skill').offset().top)-80) && ($(this).scrollTop() <= ($('#sec4-services').offset().top)-82)) {
             $('.skills').addClass('active-color')
         } else {
             $('.skills').removeClass('active-color')
         }
         // services
-        if (($(this).scrollTop() >= ($('#sec4-services').offset().top)+77) && ($(this).scrollTop() <= ($('#sec5-port').offset().top)-76)) {
+        if (($(this).scrollTop() >= ($('#sec4-services').offset().top)-80) && ($(this).scrollTop() <= ($('#sec5-port').offset().top)-82)) {
             $('.services').addClass('active-color')
         } else {
             $('.services').removeClass('active-color')
         }
         // portfolio
-        if (($(this).scrollTop() >= ($('#sec5-port').offset().top)-77) && ($(this).scrollTop() <= ($('#foot-contact').offset().top)-76)) {
+        if (($(this).scrollTop() >= ($('#sec5-port').offset().top)-80) && ($(this).scrollTop() <= ($('#foot-contact').offset().top)-82)) {
             $('.portfolio').addClass('active-color')
         } else {
             $('.portfolio').removeClass('active-color')
         }
         // contact
-        if ($(this).scrollTop() >= ($('#foot-contact').offset().top)-77) {
+        if ($(this).scrollTop() >= ($('#foot-contact').offset().top)-80) {
             $('.contact').addClass('active-color')
         } else {
             $('.contact').removeClass('active-color')
@@ -115,7 +115,7 @@ $(document).ready(function () {
     })
     // click scroll
     // home
-    $('.home').click(function () {
+    $('.home ,nav a.home').click(function () {
         $('body,html').animate({ scrollTop: 0 }, 1000);
     })
 

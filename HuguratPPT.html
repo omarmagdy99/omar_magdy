@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>تفسير سورة الحجرات - درس متكامل</title>
+    <!-- الخطوط العربية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* ===== المتغيرات العامة ===== */
+        :root {
+            --primary-dark: #0b3b5c;
+            --primary-medium: #1f5f8e;
+            --primary-light: #4a89b9;
+            --primary-soft: #e8f0fe;
+            --accent-warm: #e68a2e;
+            --accent-soft: #f7e9d7;
+            --accent-border: #f1d5a0;
+            --neutral-white: #ffffff;
+            --neutral-bg: #f8f9fa;
+            --neutral-border: #dee2e6;
+            --text-dark: #1e2f4a;
+            --text-medium: #2c3e50;
+            --text-soft: #4f6579;
+            --shadow-sm: 0 4px 10px rgba(0, 45, 80, 0.08);
+            --shadow-md: 0 12px 24px rgba(0, 60, 120, 0.15);
+            --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.3);
+            --gradient-bg: linear-gradient(145deg, #eef2f7 0%, #d9e2ef 100%);
+            --gradient-progress: linear-gradient(90deg, #e68a2e, #f0b27a);
+            --border-radius-lg: 40px;
+            --border-radius-md: 30px;
+            --border-radius-sm: 20px;
+            --border-radius-xs: 15px;
+            --transition-default: all 0.3s ease;
+            
+            /* أحجام الخطوط المتغيرة */
+            --font-size-xl: clamp(2rem, 5vw, 3rem);
+            --font-size-lg: clamp(1.4rem, 4vw, 2rem);
+            --font-size-md: clamp(1.1rem, 3vw, 1.4rem);
+            --font-size-sm: clamp(0.9rem, 2.5vw, 1.1rem);
+            --font-size-xs: clamp(0.8rem, 2vw, 0.9rem);
+            
+            /* المسافات المتغيرة */
+            --spacing-xs: clamp(5px, 2vw, 10px);
+            --spacing-sm: clamp(10px, 3vw, 15px);
+            --spacing-md: clamp(15px, 4vw, 25px);
+            --spacing-lg: clamp(20px, 5vw, 40px);
+            --spacing-xl: clamp(30px, 6vw, 50px);
+        }
+
+        /* ===== إعدادات أساسية ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--gradient-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: var(--spacing-md);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== الحاوية الرئيسية ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--neutral-white);
+            box-shadow: var(--shadow-md);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            padding: var(--spacing-xl);
+            border: 1px solid rgba(0, 105, 150, 0.15);
+            transition: var(--transition-default);
+            width: 100%;
+        }
+
+        .container:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== تنسيقات الطباعة ===== */
+        @media print {
+            body {
+                background: white;
+                padding: 0.5cm;
+            }
+            .container {
+                box-shadow: none;
+                border: 1px solid #b0c4de;
+                border-radius: 0;
+                padding: 1cm;
+                max-width: 100%;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .aya-text {
+                font-size: 24pt !important;
+                line-height: 1.5 !important;
+            }
+            .meaning-item {
+                break-inside: avoid;
+            }
+        }
+
+        /* ===== العناوين الرئيسية ===== */
+        h1 {
+            font-size: var(--font-size-xl);
+            color: var(--primary-dark);
+            text-align: center;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0, 60, 100, 0.1);
+            position: relative;
+            padding-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(150px, 30%);
+            height: 4px;
+            background: var(--gradient-progress);
+            border-radius: 2px;
+        }
+
+        .subhead {
+            text-align: center;
+            font-size: var(--font-size-md);
+            color: var(--primary-medium);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 3px solid #a0c6e9;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .subhead i {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            color: var(--accent-warm);
+        }
+
+        /* ===== بطاقات الآيات ===== */
+        .aya-card {
+            background: var(--primary-soft);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-md) var(--border-radius-md) var(--border-radius-md) 5px;
+            margin: var(--spacing-lg) 0 var(--spacing-md);
+            border-right: 8px solid var(--primary-medium);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-default);
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .aya-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .aya-text {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.4rem, 5vw, 2.2rem);
+            line-height: 1.8;
+            text-align: center;
+            color: var(--primary-dark);
+            margin-bottom: var(--spacing-md);
+            word-spacing: 2px;
+            font-weight: 700;
+            position: relative;
+            padding: var(--spacing-sm);
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        .aya-text::before,
+        .aya-text::after {
+            font-family: 'Amiri', serif;
+            font-size: clamp(2rem, 6vw, 3rem);
+            color: var(--primary-light);
+            opacity: 0.5;
+            margin: 0 5px;
+        }
+
+        .aya-text::before {
+            content: '{';
+        }
+
+        .aya-text::after {
+            content: '}';
+        }
+
+        /* ===== أقسام المعاني والتفسير ===== */
+        .section-title {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+            padding-right: var(--spacing-sm);
+            border-right: 6px solid var(--accent-warm);
+            position: relative;
+            word-break: break-word;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            font-weight: 600;
+            color: var(--primary-medium);
+            margin: var(--spacing-md) 0 var(--spacing-sm);
+            background: var(--accent-soft);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--accent-border);
+            max-width: 100%;
+            word-break: break-word;
+        }
+
+        /* ===== شبكة المعاني ===== */
+        .meanings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+            gap: var(--spacing-sm);
+            margin: var(--spacing-sm) 0 var(--spacing-md);
+        }
+
+        .meaning-item {
+            background: var(--accent-soft);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius-sm);
+            border: 1px solid var(--accent-border);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+            transition: var(--transition-default);
+            height: fit-content;
+        }
+
+        .meaning-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .meaning-item strong {
+            color: #b13e3e;
+            font-size: var(--font-size-md);
+            display: inline-block;
+            margin-left: 8px;
+            font-weight: 700;
+        }
+
+        .meaning-item span {
+            color: var(--text-medium);
+            font-size: var(--font-size-sm);
+        }
+
+        /* ===== التفسير ===== */
+        .interpretation {
+            background: var(--neutral-white);
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: var(--border-radius-sm);
+            margin: var(--spacing-sm) 0 var(--spacing-md);
+            border: 1px solid #b9d7f0;
+            box-shadow: inset 0 1px 3px #d4e2f0;
+            font-size: var(--font-size-sm);
+            position: relative;
+            overflow: hidden;
+            word-break: break-word;
+        }
+
+        .interpretation::before {
+            content: '📘';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        /* ===== صناديق المعلومات ===== */
+        .insight-box {
+            background: #d4e6f5;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-md) 10px var(--border-radius-md) 10px;
+            margin: var(--spacing-lg) 0;
+            border: 2px dashed var(--primary-medium);
+            position: relative;
+            word-break: break-word;
+        }
+
+        .insight-box p {
+            font-size: var(--font-size-md);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .insight-box i {
+            color: var(--primary-medium);
+            font-weight: bold;
+        }
+
+        /* ===== الشبكة الثنائية ===== */
+        .two-way-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+
+        .way-card {
+            background: var(--accent-soft);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-md) 10px var(--border-radius-md) 10px;
+            border: 2px solid var(--accent-warm);
+            transition: var(--transition-default);
+            word-break: break-word;
+        }
+
+        .way-card:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .way-card h3 {
+            color: #b1570f;
+            font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+            margin-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--accent-warm);
+            padding-bottom: 5px;
+        }
+
+        .way-card p {
+            font-size: var(--font-size-sm);
+        }
+
+        /* ===== أسباب النزول ===== */
+        .revelation-box {
+            background: #e4def7;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: 25px;
+            margin: var(--spacing-md) 0;
+            border-right: 8px solid #5d4a9c;
+            transition: var(--transition-default);
+            word-break: break-word;
+        }
+
+        .revelation-box:hover {
+            transform: translateX(-5px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .revelation-box h4 {
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            color: #3a2980;
+            margin-bottom: var(--spacing-sm);
+            word-break: break-word;
+        }
+
+        .revelation-box p {
+            font-size: var(--font-size-sm);
+        }
+
+        /* ===== رابط السور ===== */
+        .link-box {
+            background: #d2f0f0;
+            padding: var(--spacing-md) var(--spacing-lg);
+            border-radius: 25px;
+            margin: var(--spacing-md) 0;
+            border-right: 6px solid #1f7a7a;
+            font-size: var(--font-size-sm);
+            transition: var(--transition-default);
+            word-break: break-word;
+        }
+
+        .link-box:hover {
+            background: #c0e8e8;
+            transform: translateX(-5px);
+        }
+
+        /* ===== الشارات ===== */
+        .badge {
+            background: var(--accent-warm);
+            color: #1a2b3c;
+            font-weight: 700;
+            padding: 5px 15px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: var(--spacing-sm);
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            word-break: break-word;
+        }
+
+        /* ===== معلومات اختصار الطباعة ===== */
+        .print-shortcut-info {
+            background: #cfdee9;
+            color: #113750;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: 40px;
+            display: inline-block;
+            font-size: var(--font-size-xs);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+            border: 1px solid #6d8eac;
+            animation: pulse 2s infinite;
+            width: fit-content;
+            max-width: 100%;
+            word-break: break-word;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        .shortcut-badge {
+            background: #1e3b5a;
+            color: #f5f9ff;
+            font-family: monospace;
+            font-size: var(--font-size-xs);
+            padding: 4px 12px;
+            border-radius: 30px;
+            border: 1px solid var(--accent-warm);
+            margin: 0 5px;
+            white-space: nowrap;
+        }
+
+        /* ===== زر الطباعة ===== */
+        .button-print {
+            display: block;
+            width: fit-content;
+            margin: var(--spacing-xl) auto var(--spacing-sm);
+            background: var(--primary-medium);
+            color: white;
+            border: none;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition-default);
+            box-shadow: 0 5px 10px rgba(0, 50, 90, 0.3);
+            border: 1px solid #12406b;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .button-print::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .button-print:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .button-print:hover {
+            background: #12406b;
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 40, 70, 0.4);
+        }
+
+        .button-print:active {
+            transform: scale(0.98);
+        }
+
+        /* ===== تذييل الصفحة ===== */
+        footer {
+            margin-top: var(--spacing-xl);
+            text-align: center;
+            color: var(--text-soft);
+            font-size: var(--font-size-xs);
+            border-top: 1px solid #b6ccda;
+            padding-top: var(--spacing-sm);
+            word-break: break-word;
+        }
+
+        /* ===== خط فاصل ===== */
+        hr {
+            border: 1px solid #b3d2f0;
+            margin: var(--spacing-lg) 0;
+            width: 100%;
+        }
+
+        /* ===== شارة الأرقام ===== */
+        .number-badge {
+            background: var(--accent-warm);
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-left: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* ===== تحسينات للموبايل ===== */
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
+            
+            .container {
+                padding: var(--spacing-md);
+                border-radius: 25px;
+            }
+            
+            .aya-card {
+                padding: var(--spacing-md);
+                border-right-width: 6px;
+            }
+            
+            .meaning-item {
+                padding: var(--spacing-sm);
+            }
+            
+            .two-way-grid {
+                gap: var(--spacing-sm);
+            }
+            
+            .shortcut-badge {
+                white-space: normal;
+                display: inline-block;
+                margin: 5px 0;
+            }
+            
+            .print-shortcut-info {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        /* ===== تحسينات للتابلت ===== */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .container {
+                padding: var(--spacing-lg);
+            }
+            
+            .meanings-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===== تحسينات للشاشات الكبيرة ===== */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1400px;
+            }
+            
+            .meanings-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* ===== تحسينات اللمس للموبايل ===== */
+        @media (hover: none) and (pointer: coarse) {
+            .aya-card:hover,
+            .meaning-item:hover,
+            .way-card:hover,
+            .button-print:hover {
+                transform: none;
+            }
+            
+            .button-print {
+                padding: 15px 40px; /* مساحة لمس أكبر */
+            }
+            
+            .quick-btn {
+                min-width: 44px;
+                min-height: 44px;
+            }
+        }
+
+        /* ===== تحسينات للقراءة ===== */
+        ::selection {
+            background: var(--accent-warm);
+            color: white;
+        }
+
+        /* ===== سكرول مخصص ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary-soft);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-medium);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ===== أنيميشن خفيف ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .aya-card, .section-title, .meaning-item {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* ===== أدوات مساعدة للعرض ===== */
+        .text-center {
+            text-align: center;
+        }
+        
+        .w-100 {
+            width: 100%;
+        }
+        
+        .overflow-auto {
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        /* منع تجاوز النص */
+        p, h1, h2, h3, h4, .aya-text {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- العنوان الرئيسي -->
+        <h1>
+            <i class="fas fa-mosque" style="color: #e68a2e;"></i> 
+            سورة الحجرات 
+            <i class="fas fa-leaf" style="color: #e68a2e;"></i>
+        </h1>
+        <div class="subhead">
+            <i class="fas fa-book-open"></i> 
+            المجتمع المثالي .. آداب وتوجيهات ربانية
+        </div>
+
+        <!-- معلومات اختصار الطباعة -->
+        <div class="print-shortcut-info no-print">
+            <i class="fas fa-keyboard"></i> 
+            <span class="shortcut-badge">Ctrl + Alt + 2</span> 
+            ← لفتح نافذة الطباعة وحفظ PDF
+        </div>
+
+        <!-- ================ الآية 1 ================ -->
+        <div class="aya-card">
+            <div class="aya-text">﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُقَدِّمُوا بَيْنَ يَدَيِ اللَّهِ وَرَسُولِهِ وَاتَّقُوا اللَّهَ إِنَّ اللَّهَ سَمِيعٌ عَلِيمٌ ﴾ [الحجرات: ١]</div>
+        </div>
+        <div class="meanings-grid">
+            <div class="meaning-item"><strong>لا تقدموا:</strong> <span>لا تتقدموا بقول أو فعل، ولا تقضوا أمراً دون أمر الله ورسوله.</span></div>
+            <div class="meaning-item"><strong>بين يدي الله ورسوله:</strong> <span>كمن ذبح قبل النبي ﷺ، أو أراد تأمير أحد قبل استشارته.</span></div>
+            <div class="meaning-item"><strong>واتقوا الله إن الله سميع عليم:</strong> <span>خافوا الله فهو سميع لأقوالكم عليم بأعمالكم.</span></div>
+        </div>
+        <div class="interpretation">
+            <strong>📘 معنى الآية:</strong> ناداهم الله بعنوان الإيمان ناهياً أن يقولوا أو يعملوا شيئاً قبل أن يشرع الله ورسوله، فإن التقدم بين يديه معنى أنكم أعلم من الله ورسوله -وحاشاكم- فاتقوا الله، فهو سميع عليم. واجب المسلم ألا يفتي أو يعمل حتى يعلم حكم الله ورسوله.
+        </div>
+
+        <!-- ================ الآية 2 ================ -->
+        <div class="aya-card">
+            <div class="aya-text">﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَرْفَعُوا أَصْوَاتَكُمْ فَوْقَ صَوْتِ النَّبِيِّ وَلَا تَجْهَرُوا لَهُ بِالْقَوْلِ كَجَهْرِ بَعْضِكُمْ لِبَعْضٍ أَن تَحْبَطَ أَعْمَالُكُمْ وَأَنتُمْ لَا تَشْعُرُونَ ﴾ [٢]</div>
+        </div>
+        <div class="meanings-grid">
+            <div class="meaning-item"><strong>لا ترفعوا أصواتكم:</strong> <span>إذا نطق النبي ﷺ لا تعلوا صوتكم فوق صوته.</span></div>
+            <div class="meaning-item"><strong>ولا تجهروا له بالقول كجهر بعضكم لبعض:</strong> <span>لا تخاطبوه باسمه مجرداً، بل بلين وتوقير.</span></div>
+            <div class="meaning-item"><strong>أن تحبط أعمالكم:</strong> <span>كراهة أن تبطل أعمالكم فلا تثابوا عليها.</span></div>
+            <div class="meaning-item"><strong>وأنتم لا تشعرون:</strong> <span>ببطلانها إن صاحب ذلك استخفاف أو عدم مبالاة.</span></div>
+        </div>
+        <div class="interpretation">
+            <strong>📘 معنى الآية:</strong> يا أيها المؤمنون، تأدبوا مع رسول الله ﷺ، لا ترفعوا أصواتكم فوق صوته، ولا تنادوه باسمه كما ينادي بعضكم بعضاً، بل نادوه بالنبوة والرسالة، خوفاً من حبوط أعمالكم بسبب عدم التوقير وأنتم لا تشعرون.
+        </div>
+
+        <!-- ================ الآية 3 ================ -->
+        <div class="aya-card">
+            <div class="aya-text">﴿ إِنَّ الَّذِينَ يَغُضُّونَ أَصْوَاتَهُمْ عِندَ رَسُولِ اللَّهِ أُولَٰئِكَ الَّذِينَ امْتَحَنَ اللَّهُ قُلُوبَهُمْ لِلتَّقْوَىٰ لَهُم مَّغْفِرَةٌ وَأَجْرٌ عَظِيمٌ ﴾ [٣]</div>
+        </div>
+        <div class="meanings-grid">
+            <div class="meaning-item"><strong>يغضون أصواتهم:</strong> <span>يخفضونها عند رسول الله كأنهم يسارّونه.</span></div>
+            <div class="meaning-item"><strong>امتحن الله قلوبهم للتقوى:</strong> <span>وسعها وشرحها لتحمل تقوى الله.</span></div>
+            <div class="meaning-item"><strong>لهم مغفرة وأجر عظيم:</strong> <span>مغفرة لذنوبهم وأجر عظيم هو الجنة.</span></div>
+        </div>
+        <div class="interpretation">
+            <strong>📘 معنى الآية:</strong> يثني الله على من يخفضون أصواتهم عند رسول الله، كأبي بكر وعمر، أولئك الذين شرح الله صدورهم للتقوى، لهم مغفرة وأجر عظيم.
+        </div>
+
+        <!-- ================ الآية 4-5 ================ -->
+        <div class="aya-card">
+            <div class="aya-text">﴿ إِنَّ الَّذِينَ يُنَادُونَكَ مِن وَرَاءِ الْحُجُرَاتِ أَكْثَرُهُمْ لَا يَعْقِلُونَ * وَلَوْ أَنَّهُمْ صَبَرُوا حَتَّىٰ تَخْرُجَ إِلَيْهِمْ لَكَانَ خَيْرًا لَّهُمْ وَاللَّهُ غَفُورٌ رَّحِيمٌ ﴾ [٤-٥]</div>
+        </div>
+        <div class="meanings-grid">
+            <div class="meaning-item"><strong>الحجرات:</strong> <span>حجرات أمهات المؤمنين، ناداه وفد بني تميم من خارجها.</span></div>
+            <div class="meaning-item"><strong>لا يعقلون:</strong> <span>ما فعلوه من عدم مراعاة الأدب مع مقامك الشريف.</span></div>
+            <div class="meaning-item"><strong>صبروا حتى تخرج إليهم:</strong> <span>لو انتظروا حتى تخرج لهم لكان خيراً.</span></div>
+        </div>
+        <div class="interpretation">
+            <strong>📘 معنى الآية:</strong> الذين ينادونك من وراء الحجرات بصوت مرتفع أكثرهم يجهلون مكانتك، ولو صبروا حتى تخرج إليهم لكان أفضل، والله غفور رحيم لمن تاب.
+        </div>
+
+        <!-- ================ الآية 6 ================ -->
+        <div class="aya-card">
+            <div class="aya-text">﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا إِن جَاءَكُمْ فَاسِقٌ بِنَبَإٍ فَتَبَيَّنُوا أَن تُصِيبُوا قَوْمًا بِجَهَالَةٍ فَتُصْبِحُوا عَلَىٰ مَا فَعَلْتُمْ نَادِمِينَ ﴾ [٦]</div>
+        </div>
+        <div class="meanings-grid">
+            <div class="meaning-item"><strong>فاسق بنبأ:</strong> <span>مرتكب كبيرة ينبئكم بخبر ذي شأن.</span></div>
+            <div class="meaning-item"><strong>فتبينوا:</strong> <span>تثبتوا قبل الحكم أو الفعل.</span></div>
+            <div class="meaning-item"><strong>أن تصيبوا قومًا بجهالة:</strong> <span>خشية أن تلحقوا الأذى بقوم عن جهل.</span></div>
+        </div>
+        <div class="interpretation">
+            <strong>📘 معنى الآية:</strong> إن جاءكم رجل فاسق (كذاب أو مرتكب كبيرة) بخبر، فتثبتوا من صدقه، لئلا تصيبوا قومًا بريئين بجهالة فتصبحوا نادمين. وقد نزلت في قصة الوليد بن عقبة مع الحارث بن ضرار.
+        </div>
+
+        <!-- ================ روابط السورة بالفتح والمجتمع المثالي ================ -->
+        <hr>
+        <span class="badge"><i class="fas fa-link"></i> ربط سورة الفتح بالحجرات</span>
+        <div class="two-way-grid">
+            <div class="way-card">
+                <h3>🏆 سورة الفتح</h3>
+                <p><strong>تتحدث عن أسباب النصر:</strong> الإيمان بالله وتعزير النبي وتوقيره، ووحدة الصف (أشداء على الكفار رحماء بينهم).</p>
+                <p>⚡ الجيل المنتصر: متآخٍ، متراحم، عادل.</p>
+                <p><i>﴿ لِّتُؤْمِنُوا بِاللَّهِ وَرَسُولِهِ وَتُعَزِّرُوهُ وَتُوَقِّرُوهُ ﴾</i></p>
+            </div>
+            <div class="way-card">
+                <h3>🕊️ سورة الحجرات</h3>
+                <p><strong>كيف نحافظ على المجتمع بعد النصر؟</strong> بعد الفتح جاءت الحجرات لتحذر من مفسدات المجتمع.</p>
+                <p>⚠️ (لا تقدموا) ⇦ مقابلة (توقيره).<br>
+                ⚠️ (لا ترفعوا أصواتكم) ⇦ مقابل (تعزيره).<br>
+                ⚠️ (تبينوا خبر الفاسق) ⇦ حفاظاً على الترابط.<br>
+                ⚠️ (لا يسخر قوم، ولا تلمزوا، ولا تنابزوا) ⇦ حماية العلاقات.</p>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <p>🧠 <strong>نظرة شاملة:</strong> سورة الحجرات ترتب خطورة الخلل: ١) خلل مع الله والرسول (التقديم بين يديه) ٢) عدم توقيره ٣) تصديق الفاسق ٤) مشاكل بين المؤمنين. فالحفاظ على المجتمع يبدأ من ضبط العلاقة مع الله والرسول ثم التعامل بحذر مع الأخبار ثم الإصلاح بين المؤمنين.</p>
+        </div>
+
+        <!-- ================ أسباب النزول ================ -->
+        <div class="section-title"><i class="fas fa-history"></i> أسباب نزول آيات من السورة</div>
+
+        <div class="revelation-box">
+            <h4><i class="fas fa-user"></i> 🔹 الآيات ١-٥: في أبي بكر وعمر وفد بني تميم</h4>
+            <p>عن ابن أبي مليكة: كاد الخيران أن يهلكا أبو بكر وعمر، رفعا أصواتهما عند النبي ﷺ حين قدم عليه ركب بني تميم، فأشار أحدهما بالأقرع بن حابس والآخر برجل آخر، فارتفعت أصواتهما فنزلت: (لا ترفعوا أصواتكم).</p>
+        </div>
+        <div class="revelation-box">
+            <h4><i class="fas fa-door-open"></i> 🔹 الآية ٤: نداء من وراء الحجرات</h4>
+            <p>عن البراء بن عازب: جاء رجل (الأقرع بن حابس) فقال: يا رسول الله إن حمدي زين وإن ذمي شين، فقال النبي ﷺ: ذاك الله عز وجل، فنزلت: (إن الذين ينادونك من وراء الحجرات).</p>
+        </div>
+        <div class="revelation-box">
+            <h4><i class="fas fa-newspaper"></i> 🔹 الآية ٦: قصة الحارث بن ضرار والوليد بن عقبة</h4>
+            <p>بعث النبي ﷺ الوليد بن عقبة لقبض زكاة من الحارث، فرجع الوليد وقال: منعني الزكاة وأراد قتلي! فجهز النبي ﷺ بعثاً، فقابله الحارث وقال: ما رأيته ولا أتاني. فنزلت: (إن جاءكم فاسق بنبإ فتبينوا). قال قتادة: فكان النبي ﷺ يقول: "التثبت من الله والعجلة من الشيطان".</p>
+        </div>
+
+        <!-- ================ بقية الآيات والمفاهيم ================ -->
+        <div class="section-title"><i class="fas fa-gem"></i> تكملة توجيهات السورة</div>
+
+        <!-- الآية 11 السخرية -->
+        <div class="aya-card">
+            <div class="aya-text">﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا لَا يَسْخَرْ قَوْمٌ مِّن قَوْمٍ عَسَىٰ أَن يَكُونُوا خَيْرًا مِّنْهُمْ ﴾ [١١]</div>
+        </div>
+        <div class="meanings-grid">
+            <div class="meaning-item"><strong>لا يسخر قوم من قوم:</strong> <span>لا يستهزئ أحد بأخيه، فلربما كان خيراً عند الله منه.</span></div>
+        </div>
+
+        <!-- الآية 13 -->
+        <div class="aya-card">
+            <div class="aya-text">﴿ يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ ﴾ [١٣]</div>
+        </div>
+        <div class="interpretation">
+            <strong>📘 القاعدة الذهبية:</strong> الناس سواسية في الأصل (من ذكر وأنثى)، والشعوب والقبائل للتعارف لا للتفاخر. المفاضلة بالتقوى فقط، والله عليم خبير ببواطنكم.
+        </div>
+
+        <!-- الآية 14 -->
+        <div class="aya-card">
+            <div class="aya-text">﴿ قَالَتِ الْأَعْرَابُ آمَنَّا قُل لَّمْ تُؤْمِنُوا وَلَٰكِن قُولُوا أَسْلَمْنَا وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ ﴾ [١٤]</div>
+        </div>
+        <div class="interpretation">
+            <strong>📘 لا تمنُّوا على الله إسلامكم:</strong> لا تفتخروا بأنكم آمنتم، بل الله يمن عليكم أن هداكم للإيمان. إن الله يعلم غيب السموات والأرض، والله بصير بما تعملون.
+        </div>
+
+        <!-- ================ ملخص رائع من الدرس ================ -->
+        <hr>
+        <div class="insight-box" style="background:#f7e9d7;">
+            <p style="font-size:1.6rem; color:#b1570f;"><i class="fas fa-lightbulb"></i> خلاصة مركزة:</p>
+            <p><span class="number-badge">1</span> <strong>الآيات ١-٥:</strong> الأدب مع الله والرسول (لا تقدموا، لا ترفعوا أصواتكم).</p>
+            <p><span class="number-badge">2</span> <strong>الآية ٦:</strong> التثبت من خبر الفاسق.</p>
+            <p><span class="number-badge">3</span> <strong>الآيات ٩-١٠:</strong> الإصلاح بين المؤمنين والعدل (فأصلحوا بين أخويكم).</p>
+            <p><span class="number-badge">4</span> <strong>الآيات ١١-١٢:</strong> النهي عن السخرية واللمز والتنابز وسوء الظن والغيبة.</p>
+            <p><span class="number-badge">5</span> <strong>الآية ١٣:</strong> التعارف والتقوى معيار التفاضل.</p>
+            <p><span class="number-badge">6</span> <strong>الآية ١٤-١٨:</strong> الإيمان الحقيقي والتواضع، والنهي عن المن على الله.</p>
+        </div>
+
+        <!-- رابط صلح الحديبية وسورة الفتح -->
+        <div class="link-box">
+            <span class="badge" style="background: #1f7a7a; color:white;"><i class="fas fa-handshake"></i> صلح الحديبية وارتباطه بسورة الحجرات</span>
+            <p style="margin-top:10px;">بعد صلح الحديبية (سورة الفتح) دخل الناس في دين الله أفواجاً، وكثرت الوفود، فكان لابد من توجيه الأمة الجديدة بآداب التعامل مع النبي ﷺ ومع بعضهم، فنزلت سورة الحجرات لتحمي هذا المجتمع الناشئ من التفكك والتراجع، فشرعت قواعد التثبت، والأدب، والعدل، والإصلاح، ونبذ العصبية الجاهلية. فهي تكملة طبيعية لسورة الفتح: "كيف نحافظ على النصر بعد النصر".</p>
+        </div>
+
+        <!-- تذييل -->
+        <footer>
+            <i class="fas fa-pen-fancy"></i> إعداد: درس مُحضَّر - تم تصميمه لجميع الأجهزة • نفع الله به
+        </footer>
+
+        <!-- زر الطباعة الاحتياطي -->
+        <button class="button-print no-print" onclick="window.print()">
+            <i class="fas fa-print"></i> طباعة / حفظ PDF
+        </button>
+    </div>
+
+    <script>
+        // اختصار لوحة المفاتيح Ctrl + Alt + 2 لفتح الطباعة
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.altKey && e.key === '2') {
+                e.preventDefault(); // منع أي سلوك افتراضي للمتصفح لهذا الاختصار
+                window.print();
+            }
+        });
+
+        // كشف نوع الجهاز وإضافة كلاس مناسب (اختياري)
+        function detectDevice() {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                document.body.classList.add('is-mobile');
+            }
+        }
+        
+        // تنفيذ بعد تحميل الصفحة
+        window.addEventListener('load', function() {
+            detectDevice();
+            console.log('✅ الصفحة جاهزة - استخدم Ctrl+Alt+2 للطباعة');
+        });
+    </script>
+</body>
+</html>

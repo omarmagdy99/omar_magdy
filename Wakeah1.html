@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
-    <title>تفسير سورة الواقعة - الدرس الكامل</title>
+    <title>تفسير آيات من سورة الواقعة</title>
     <!-- الخطوط العربية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,7 +183,7 @@
         
         @media screen {
             .page-break {
-                display: none; /* إخفاء فواصل الصفحات على الشاشة */
+                display: none;
             }
         }
 
@@ -288,7 +288,7 @@
             content: '}';
         }
 
-        /* ===== أقسام المعاني والتفسير ===== */
+        /* ===== أقسام المعاني ===== */
         .section-title {
             font-size: clamp(1.6rem, 4vw, 2.2rem);
             font-weight: 700;
@@ -318,7 +318,7 @@
         /* ===== شبكة المعاني ===== */
         .meanings-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+            grid-template-columns: 1fr;
             gap: var(--spacing-sm);
             margin: var(--spacing-sm) 0 var(--spacing-md);
         }
@@ -331,6 +331,9 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
             transition: var(--transition-default);
             height: fit-content;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
         }
 
         .meaning-item:hover {
@@ -338,17 +341,26 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .meaning-item strong {
-            color: #b13e3e;
-            font-size: var(--font-size-md);
-            display: inline-block;
-            margin-left: 8px;
+        .meaning-item .aya-part {
+            font-family: 'Amiri', serif;
+            font-size: var(--font-size-lg);
+            color: var(--primary-dark);
             font-weight: 700;
+            min-width: 200px;
+            padding-left: 15px;
+            border-left: 2px solid var(--accent-warm);
         }
 
-        .meaning-item span {
+        .meaning-item .meaning-part {
             color: var(--text-medium);
-            font-size: var(--font-size-sm);
+            font-size: var(--font-size-md);
+            flex: 1;
+        }
+
+        .meaning-item .meaning-part strong {
+            color: #b13e3e;
+            font-weight: 700;
+            margin-left: 5px;
         }
 
         /* ===== التفسير ===== */
@@ -394,33 +406,6 @@
         .insight-box i {
             color: var(--primary-medium);
             font-weight: bold;
-        }
-
-        /* ===== أسباب النزول ===== */
-        .revelation-box {
-            background: #e4def7;
-            padding: var(--spacing-md) var(--spacing-lg);
-            border-radius: 25px;
-            margin: var(--spacing-md) 0;
-            border-right: 8px solid #5d4a9c;
-            transition: var(--transition-default);
-            word-break: break-word;
-        }
-
-        .revelation-box:hover {
-            transform: translateX(-5px);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .revelation-box h4 {
-            font-size: clamp(1.3rem, 3vw, 1.7rem);
-            color: #3a2980;
-            margin-bottom: var(--spacing-sm);
-            word-break: break-word;
-        }
-
-        .revelation-box p {
-            font-size: var(--font-size-sm);
         }
 
         /* ===== الشارات ===== */
@@ -555,29 +540,22 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        /* ===== قائمة منقطة ===== */
-        .styled-list {
-            list-style-type: none;
-            padding-right: var(--spacing-md);
-        }
-        
-        .styled-list li {
-            margin-bottom: var(--spacing-xs);
-            position: relative;
-            padding-right: 25px;
-        }
-        
-        .styled-list li::before {
-            content: "•";
-            color: var(--accent-warm);
-            font-weight: bold;
-            font-size: 1.5rem;
-            position: absolute;
-            right: 0;
-            top: -5px;
+        /* ===== تحسينات للموبايل ===== */
+        @media (max-width: 768px) {
+            .meaning-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .meaning-item .aya-part {
+                border-left: none;
+                border-bottom: 2px solid var(--accent-warm);
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+                min-width: 100%;
+            }
         }
 
-        /* ===== تحسينات للموبايل ===== */
         @media (max-width: 480px) {
             body {
                 padding: 8px;
@@ -609,25 +587,10 @@
             }
         }
 
-        /* ===== تحسينات للتابلت ===== */
-        @media (min-width: 481px) and (max-width: 768px) {
-            .container {
-                padding: var(--spacing-lg);
-            }
-            
-            .meanings-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
         /* ===== تحسينات للشاشات الكبيرة ===== */
         @media (min-width: 1400px) {
             .container {
                 max-width: 1400px;
-            }
-            
-            .meanings-grid {
-                grid-template-columns: repeat(4, 1fr);
             }
         }
 
@@ -679,20 +642,6 @@
             animation: fadeIn 0.5s ease-out;
         }
 
-        /* ===== أدوات مساعدة للعرض ===== */
-        .text-center {
-            text-align: center;
-        }
-        
-        .w-100 {
-            width: 100%;
-        }
-        
-        .overflow-auto {
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        
         /* منع تجاوز النص */
         p, h1, h2, h3, h4, .aya-text {
             overflow-wrap: break-word;
@@ -701,22 +650,6 @@
             -ms-hyphens: auto;
             hyphens: auto;
         }
-        
-        /* تنسيق خاص للنقاط */
-        .dot-point {
-            margin-bottom: 10px;
-            padding-right: 20px;
-            position: relative;
-        }
-        
-        .dot-point::before {
-            content: "•";
-            color: var(--accent-warm);
-            font-weight: bold;
-            font-size: 1.2rem;
-            position: absolute;
-            right: 0;
-        }
     </style>
 </head>
 <body>
@@ -724,12 +657,12 @@
         <!-- العنوان الرئيسي -->
         <h1>
             <i class="fas fa-quran" style="color: #e68a2e;"></i> 
-            تفسير سورة الواقعة 
+            تفسير آيات من سورة الواقعة 
             <i class="fas fa-star" style="color: #e68a2e;"></i>
         </h1>
         <div class="subhead">
             <i class="fas fa-book-open"></i> 
-            أهوال يوم القيامة - أقسام الناس - نعيم الجنة - عذاب النار - دلائل قدرة الله
+            كل آية وتفسيرها - بأسلوب مبسط ومنظم
         </div>
 
         <!-- معلومات اختصار الطباعة -->
@@ -739,159 +672,250 @@
             ← لفتح نافذة الطباعة وحفظ PDF
         </div>
 
-        <!-- ================ الآيات 1-31 ================ -->
-        <div class="page-break-avoid">
-            <div class="aya-card">
-                <div class="aya-text">﴿إِذا وَقَعَتِ الواقِعَةُ۝لَيسَ لِوَقعَتِها كاذِبَةٌ۝خافِضَةٌ رافِعَةٌ۝إِذا رُجَّتِ الأَرضُ رَجًّا۝وَبُسَّتِ الجِبالُ بَسًّا۝فَكانَت هَباءً مُنبَثًّا۝وَكُنتُم أَزواجًا ثَلاثَةً۝فَأَصحابُ المَيمَنَةِ ما أَصحابُ المَيمَنَةِ۝وَأَصحابُ المَشأَمَةِ ما أَصحابُ المَشأَمَةِ۝وَالسّابِقونَ السّابِقونَ۝أُولئِكَ المُقَرَّبونَ۝في جَنّاتِ النَّعيمِ۝ثُلَّةٌ مِنَ الأَوَّلينَ۝وَقَليلٌ مِنَ الآخِرينَ۝عَلى سُرُرٍ مَوضونَةٍ۝مُتَّكِئينَ عَلَيها مُتَقابِلينَ۝يَطوفُ عَلَيهِم وِلدانٌ مُخَلَّدونَ۝بِأَكوابٍ وَأَباريقَ وَكَأسٍ مِن مَعينٍ۝لا يُصَدَّعونَ عَنها وَلا يُنزِفونَ۝وَفاكِهَةٍ مِمّا يَتَخَيَّرونَ۝وَلَحمِ طَيرٍ مِمّا يَشتَهونَ۝وَحورٌ عينٌ۝كَأَمثالِ اللُّؤلُؤِ المَكنونِ۝جَزاءً بِما كانوا يَعمَلونَ۝لا يَسمَعونَ فيها لَغوًا وَلا تَأثيمًا۝إِلّا قيلًا سَلامًا سَلامًا۝وَأَصحابُ اليَمينِ ما أَصحابُ اليَمينِ۝في سِدرٍ مَخضودٍ۝وَطَلحٍ مَنضودٍ۝وَظِلٍّ مَمدودٍ۝وَماءٍ مَسكوبٍ﴾ [الواقعة: ١-٣١]</div>
+        <!-- ================ القسم الأول: خلق الإنسان والبعث ================ -->
+        <div class="section-title"><i class="fas fa-child"></i> خلق الإنسان والبعث بعد الموت</div>
+        
+        <div class="meanings-grid">
+            <div class="meaning-item">
+                <span class="aya-part">﴿نَحْنُ خَلَقْنَاكُمْ فَلَوْلَا تُصَدِّقُونَ﴾</span>
+                <span class="meaning-part"><strong>تصدقون :</strong> تؤمنون بالبعث بعد الموت.</span>
             </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ المقطع الأول: أهوال يوم القيامة ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-volcano"></i> المقطع الأول: أهوال يوم القيامة (الآيات ١ - ٧)</div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>الْوَاقِعَةُ:</strong> <span>يوم القيامة (سُميت بذلك لتحقق وقوعها).</span></div>
-                <div class="meaning-item"><strong>كَاذِبَةٌ:</strong> <span>ليس لوقوعها كَذِب، فهي واقعة لا محالة. لا مرد ولا عودة عن هذا المقام. والقول الثاني أنها إذا وقعت لن يكذب بها أحد.</span></div>
-                <div class="meaning-item"><strong>خَافِضَةٌ رَّافِعَةٌ:</strong> <span>تخفض أقواماً في النار (الأشقياء)، وترفع أقواماً في الجنة (السعداء).</span></div>
-                <div class="meaning-item"><strong>رُجَّتِ:</strong> <span>حُرِّكت وزُلْزِلَت زلزالاً شديداً.</span></div>
-                <div class="meaning-item"><strong>بُسَّتِ:</strong> <span>فُتِّتَت الجبال وصارت كالدقيق.</span></div>
-                <div class="meaning-item"><strong>هَبَاءً مُّنْبَثًّا:</strong> <span>غباراً دقيقاً متفرقاً ومنتشراً في الهواء.</span></div>
-                <div class="meaning-item"><strong>أَزْوَاجًا ثَلَاثَةً:</strong> <span>أصنافاً وفرقاً ثلاثة (السابقون، وأصحاب اليمين، وأصحاب الشمال).</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَفَرَأَيْتُم مَّا تُمْنُونَ﴾</span>
+                <span class="meaning-part"><strong>تمنون :</strong> ما تقذفونه من النطفة (المني) في الأرحام.</span>
             </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ المقطع الثاني: أقسام الناس يوم القيامة ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-users"></i> المقطع الثاني: أقسام الناس يوم القيامة (الآيات ٨ - ١٤)</div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>الْمَيْمَنَةِ:</strong> <span>اليمين واليمن والبركة (وهم أهل الجنة).</span></div>
-                <div class="meaning-item"><strong>الْمَشْأَمَةِ:</strong> <span>الشمال والشؤم (وهم أهل النار).</span></div>
-                <div class="meaning-item"><strong>السَّابِقُونَ:</strong> <span>المبادرون في الدنيا إلى الإيمان والأعمال الصالحة (وهم أرفع درجات الجنة).</span></div>
-                <div class="meaning-item"><strong>ثُلَّةٌ:</strong> <span>جماعة كبيرة من الناس.</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَأَنتُمْ تَخْلُقُونَهُ أَمْ نَحْنُ الْخَالِقُونَ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
             </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ المقطع الثالث: نعيم السابقين المقربين ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-crown"></i> المقطع الثالث: نعيم السابقين المقربين (الآيات ١٥ - ٢٦)</div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>مَّوْضُونَةٍ:</strong> <span>منسوجة ومشبّكة بالذهب واللؤلؤ والياقوت.</span></div>
-                <div class="meaning-item"><strong>مُّخَلَّدُونَ:</strong> <span>باقون على شبابهم ونضارتهم، لا يكبرون ولا يهرمون.</span></div>
-                <div class="meaning-item"><strong>أَبَارِيقَ:</strong> <span>أوانٍ للشرب لها مقابض ومصبّات (عُرى وخراطيم).</span></div>
-                <div class="meaning-item"><strong>مَّعِينٍ:</strong> <span>خمر جارية من العيون لا تنقطع.</span></div>
-                <div class="meaning-item"><strong>لَّا يُصَدَّعُونَ عَنْهَا:</strong> <span>لا يصيبهم منها صداع في رؤوسهم (عكس خمر الدنيا).</span></div>
-                <div class="meaning-item"><strong>وَلَا يُنْزِفُونَ:</strong> <span>لا تذهب عقولهم ولا يسكرون.</span></div>
-                <div class="meaning-item"><strong>الْمَكْنُونِ:</strong> <span>المحفوظ والمصون في أصدافه (مما يحفظ له صفاءه وجماله).</span></div>
-                <div class="meaning-item"><strong>لَغْوًا:</strong> <span>كلاماً باطلاً لا فائدة منه.</span></div>
-                <div class="meaning-item"><strong>تَأْثِيمًا:</strong> <span>كلاماً يوقع في الإثم والذنب.</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿نَحْنُ قَدَّرْنَا بَيْنَكُمُ الْمَوْتَ وَمَا نَحْنُ بِمَسْبُوقِينَ﴾</span>
+                <span class="meaning-part"><strong>بمسبوقين :</strong> بمغلوبين أو عاجزين عن إعادتكم.</span>
             </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ المقطع الرابع: نعيم أصحاب اليمين ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-hand-peace"></i> المقطع الرابع: نعيم أصحاب اليمين (الآيات ٢٧ - ٤٠)</div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>سِدْرٍ:</strong> <span>شجر النَّبِق.</span></div>
-                <div class="meaning-item"><strong>مَّخْضُودٍ:</strong> <span>منزوع الشوك، لا شوك فيه.</span></div>
-                <div class="meaning-item"><strong>طَلْحٍ:</strong> <span>شجر الموز.</span></div>
-                <div class="meaning-item"><strong>مَّنضُودٍ:</strong> <span>متراكم الثمر، بعضه مصفوف فوق بعض.</span></div>
-                <div class="meaning-item"><strong>مَّسْكُوبٍ:</strong> <span>جارٍ لا ينقطع أبداً.</span></div>
-                <div class="meaning-item"><strong>عُرُبًا:</strong> <span>جمع (عَرُوب)، وهي المرأة المتوددة والمتحببة لزوجها.</span></div>
-                <div class="meaning-item"><strong>أَتْرَابًا:</strong> <span>في سن واحدة ومرحلة عمرية متقاربة (وهي سن الشباب).</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿عَلَىٰ أَن نُّبَدِّلَ أَمْثَالَكُمْ وَنُنشِئَكُمْ فِي مَا لَا تَعْلَمُونَ﴾</span>
+                <span class="meaning-part"><strong>ننشئكم :</strong> نخلقكم ونبعثكم يوم القيامة في صفات وهيئات لا تعلمونها.</span>
             </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ المقطع الخامس: عذاب أصحاب الشمال ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-skull"></i> المقطع الخامس: عذاب أصحاب الشمال (الآيات ٤١ - ٥٦)</div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>سَمُومٍ:</strong> <span>ريح حارة شديدة الحرارة تدخل في مسام الجلد.</span></div>
-                <div class="meaning-item"><strong>حَمِيمٍ:</strong> <span>ماء شديد الغليان.</span></div>
-                <div class="meaning-item"><strong>يَحْمُومٍ:</strong> <span>دخان أسود شديد السواد والحرارة والنتن.</span></div>
-                <div class="meaning-item"><strong>مُتْرَفِينَ:</strong> <span>منعمين غارقين في الشهوات واللذات المحرمة في الدنيا.</span></div>
-                <div class="meaning-item"><strong>الْحِنثِ الْعَظِيمِ:</strong> <span>الذنب الكبير (كالشرك بالله، أو الإصرار على المعاصي).</span></div>
-                <div class="meaning-item"><strong>زَقُّومٍ:</strong> <span>شجر خبيث الطعم والرائحة ينبت في قعر جهنم.</span></div>
-                <div class="meaning-item"><strong>الْهِيمِ:</strong> <span>الإبل العِطاش التي أصابها داء فلا ترتوي من الماء أبداً.</span></div>
-                <div class="meaning-item"><strong>نُزُلُهُمْ:</strong> <span>ضيافتهم وما يُعَدّ لهم لاستقبالهم (وهذا من باب التهكم بهم).</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿وَلَقَدْ عَلِمْتُمُ النَّشْأَةَ الْأُولَىٰ فَلَوْلَا تَذَكَّرُونَ﴾</span>
+                <span class="meaning-part"><strong>النشأة الأولى :</strong> خلقتكم الأولى من العدم.</span>
             </div>
         </div>
 
         <div class="page-break"></div>
 
-        <!-- ================ الآيات 57-74 ================ -->
-        <div class="page-break-avoid">
-            <div class="aya-card">
-                <div class="aya-text">﴿نَحنُ خَلَقناكُم فَلَولا تُصَدِّقونَ۝أَفَرَأَيتُم ما تُمنونَ۝أَأَنتُم تَخلُقونَهُ أَم نَحنُ الخالِقونَ۝نَحنُ قَدَّرنا بَينَكُمُ المَوتَ وَما نَحنُ بِمَسبوقينَ۝عَلى أَن نُبَدِّلَ أَمثالَكُم وَنُنشِئَكُم في ما لا تَعلَمونَ۝وَلَقَد عَلِمتُمُ النَّشأَةَ الأولى فَلَولا تَذَكَّرونَ۝أَفَرَأَيتُم ما تَحرُثونَ۝أَأَنتُم تَزرَعونَهُ أَم نَحنُ الزّارِعونَ۝لَو نَشاءُ لَجَعَلناهُ حُطامًا فَظَلتُم تَفَكَّهونَ۝إِنّا لَمُغرَمونَ۝بَل نَحنُ مَحرومونَ۝أَفَرَأَيتُمُ الماءَ الَّذي تَشرَبونَ۝أَأَنتُم أَنزَلتُموهُ مِنَ المُزنِ أَم نَحنُ المُنزِلونَ۝لَو نَشاءُ جَعَلناهُ أُجاجًا فَلَولا تَشكُرونَ۝أَفَرَأَيتُمُ النّارَ الَّتي تورونَ۝أَأَنتُم أَنشَأتُم شَجَرَتَها أَم نَحنُ المُنشِئونَ۝نَحنُ جَعَلناها تَذكِرَةً وَمَتاعًا لِلمُقوينَ۝فَسَبِّح بِاسمِ رَبِّكَ العَظيمِ﴾ [الواقعة: ٥٧-٧٤]</div>
+        <!-- ================ القسم الثاني: إنبات الزرع ================ -->
+        <div class="section-title"><i class="fas fa-seedling"></i> إنبات الزرع وقدرة الله</div>
+        
+        <div class="meanings-grid">
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَفَرَأَيْتُم مَّا تَحْرُثُونَ﴾</span>
+                <span class="meaning-part"><strong>تحرثون :</strong> ما تلقونه من البذر في الأرض للزراعة.</span>
             </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ الدليل الأول: خلق الإنسان ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-child"></i> الدليل الأول: خلق الإنسان (الآيات ٥٧ - ٦٢)</div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>تُمْنُونَ:</strong> <span>النطفة (المنيّ) التي تقذفونها في الأرحام.</span></div>
-                <div class="meaning-item"><strong>بِمَسْبُوقِينَ:</strong> <span>بمغلوبين أو عاجزين (أي لا يعجزنا إماتتكم وإعادة خلقكم).</span></div>
-                <div class="meaning-item"><strong>النَّشْأَةَ الْأُولَىٰ:</strong> <span>الخلقة الأولى من العدم (فالذي خلقكم أول مرة قادر على إعادتكم).</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَأَنتُمْ تَزْرَعُونَهُ أَمْ نَحْنُ الزَّارِعُونَ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿لَوْ نَشَاءُ لَجَعَلْنَاهُ حُطَامًا فَظَلْتُمْ تَفَكَّهُونَ﴾</span>
+                <span class="meaning-part"><strong>حطاماً :</strong> نباتاً يابساً هشيماً متكسراً لا يُنتفع به.<br><strong>تفكّهون :</strong> تتعجبون، وتتندمون وتتحسرون على ضياع زرعكم.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿إِنَّا لَمُغْرَمُونَ﴾</span>
+                <span class="meaning-part"><strong>لمغرمون :</strong> لمعذبون، وقيل: خسرنا وهلكت أموالنا.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿بَلْ نَحْنُ مَحْرُومُونَ﴾</span>
+                <span class="meaning-part"><strong>محرومون :</strong> ممنوعون من الرزق والخير.</span>
             </div>
         </div>
 
         <div class="page-break"></div>
 
-        <!-- ================ الدليل الثاني: إنبات الزرع ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-seedling"></i> الدليل الثاني: إنبات الزرع (الآيات ٦٣ - ٦٧)</div>
+        <!-- ================ القسم الثالث: إنزال الماء ================ -->
+        <div class="section-title"><i class="fas fa-water"></i> إنزال الماء العذب</div>
+        
+        <div class="meanings-grid">
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَفَرَأَيْتُمُ الْمَاءَ الَّذِي تَشْرَبُونَ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>تَحْرُثُونَ:</strong> <span>ما تلقونه من البذر في الأرض للزراعة.</span></div>
-                <div class="meaning-item"><strong>حُطَامًا:</strong> <span>نباتاً يابساً هشيماً متكسراً لا يُنتفع به ولا يُؤكل.</span></div>
-                <div class="meaning-item"><strong>تَفَكَّهُونَ:</strong> <span>تتعجبون، وتتندمون وتتحسرون على ضياع زرعكم وتعبكم.</span></div>
-                <div class="meaning-item"><strong>لَمُغْرَمُونَ:</strong> <span>لمعذبون، وقيل: خسرنا وهلكت أموالنا.</span></div>
-                <div class="meaning-item"><strong>مَحْرُومُونَ:</strong> <span>ممنوعون من الرزق والخير.</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَأَنتُمْ أَنزَلْتُمُوهُ مِنَ الْمُزْنِ أَمْ نَحْنُ الْمُنزِلُونَ﴾</span>
+                <span class="meaning-part"><strong>المزن :</strong> السحاب المضيء الذي يحمل المطر.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿لَوْ نَشَاءُ جَعَلْنَاهُ أُجَاجًا فَلَوْلَا تَشْكُرُونَ﴾</span>
+                <span class="meaning-part"><strong>أجاجاً :</strong> شديد الملوحة والمرارة بحيث لا يُمكن شربه.</span>
             </div>
         </div>
 
         <div class="page-break"></div>
 
-        <!-- ================ الدليل الثالث: إنزال الماء العذب ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-water"></i> الدليل الثالث: إنزال الماء العذب (الآيات ٦٨ - ٧٠)</div>
+        <!-- ================ القسم الرابع: إشعال النار ================ -->
+        <div class="section-title"><i class="fas fa-fire"></i> إشعال النار وتذكير بجهنم</div>
+        
+        <div class="meanings-grid">
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَفَرَأَيْتُمُ النَّارَ الَّتِي تُورُونَ﴾</span>
+                <span class="meaning-part"><strong>تورون :</strong> توقدون وتشعلون (تستخرجون النار بالقدح والاحتكاك).</span>
+            </div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>الْمُزْنِ:</strong> <span>السحاب المضيء الذي يحمل المطر.</span></div>
-                <div class="meaning-item"><strong>أُجَاجًا:</strong> <span>شديد الملوحة والمرارة بحيث لا يُمكن شربه ولا يُنبت زرعاً.</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَأَنتُمْ أَنشَأْتُمْ شَجَرَتَهَا أَمْ نَحْنُ الْمُنشِئُونَ﴾</span>
+                <span class="meaning-part"><strong>شجرتها :</strong> الشجرة التي يُوقَد منها (كشجر المَرْخ والعَفَار عند العرب).</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿نَحْنُ جَعَلْنَاهَا تَذْكِرَةً وَمَتَاعًا لِّلْمُقْوِينَ﴾</span>
+                <span class="meaning-part"><strong>تذكرة :</strong> تذكيراً لكم بنار جهنم لتخافوها.<br><strong>للمقوين :</strong> للمسافرين في القفار والصحراء الخالية، أو للمحتاجين.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظِيمِ﴾</span>
+                <span class="meaning-part"><strong>فسبّح :</strong> نزِّه ربك وعظّمه عن كل نقص.</span>
             </div>
         </div>
 
         <div class="page-break"></div>
 
-        <!-- ================ الدليل الرابع: إشعال النار ================ -->
-        <div class="page-break-avoid">
-            <div class="section-title"><i class="fas fa-fire"></i> الدليل الرابع: إشعال النار (الآيات ٧١ - ٧٤)</div>
+        <!-- ================ القسم الخامس: عظمة القرآن ================ -->
+        <div class="section-title"><i class="fas fa-book"></i> عظمة القرآن الكريم</div>
+        
+        <div class="meanings-grid">
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَلَا أُقْسِمُ بِمَوَاقِعِ النُّجُومِ﴾</span>
+                <span class="meaning-part"><strong>بمواقع النجوم :</strong> بمساقط النجوم ومغاربها، أو منازلها.</span>
+            </div>
             
-            <div class="meanings-grid">
-                <div class="meaning-item"><strong>تُورُونَ:</strong> <span>توقدون وتشعلون (تستخرجون النار بالاحتكاك من الخشب والزند).</span></div>
-                <div class="meaning-item"><strong>شَجَرَتَهَا:</strong> <span>الشجرة التي يُوقَد منها (كشجر المَرْخ والعَفَار الذي كانت تستخدمه العرب لإشعال النار).</span></div>
-                <div class="meaning-item"><strong>تَذْكِرَةً:</strong> <span>تذكيراً لكم بنار جهنم الكبرى لتخافوها وتستعدوا لها.</span></div>
-                <div class="meaning-item"><strong>لِّلْمُقْوِينَ:</strong> <span>للمسافرين في القفار والصحراء الخالية (يستدفئون بها ويطبخون طعامهم)، وقيل: للمحتاجين.</span></div>
-                <div class="meaning-item"><strong>فَسَبِّحْ:</strong> <span>نزِّه ربك وعظّمه عن كل نقص أو شريك لا يليق بجلاله.</span></div>
+            <div class="meaning-item">
+                <span class="aya-part">﴿وَإِنَّهُ لَقَسَمٌ لَّوْ تَعْلَمُونَ عَظِيمٌ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿إِنَّهُ لَقُرْآنٌ كَرِيمٌ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿فِي كِتَابٍ مَّكْنُونٍ﴾</span>
+                <span class="meaning-part"><strong>مكنون :</strong> محفوظ ومصون مستور عن الأعين (وهو اللوح المحفوظ).</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿لَّا يَمَسُّهُ إِلَّا الْمُطَهَّرُونَ﴾</span>
+                <span class="meaning-part"><strong>المطهرون :</strong> الملائكة الأبرار المنزهون عن الذنوب والآفات.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿تَنزِيلٌ مِّن رَّبِّ الْعَالَمِينَ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿أَفَبِهَٰذَا الْحَدِيثِ أَنتُم مُّدْهِنُونَ﴾</span>
+                <span class="meaning-part"><strong>مدهنون :</strong> مكذبون، أو متهاونون وتاركون للحق.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿وَتَجْعَلُونَ رِزْقَكُمْ أَنَّكُمْ تُكَذِّبُونَ﴾</span>
+                <span class="meaning-part"><strong>تجعلون رزقكم :</strong> شكركم لله على ما رزقكم من النعم (كمطر السماء).</span>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- ================ القسم السادس: ساعة الموت ================ -->
+        <div class="section-title"><i class="fas fa-clock"></i> ساعة الموت وما بعدها</div>
+        
+        <div class="meanings-grid">
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَلَوْلَا إِذَا بَلَغَتِ الْحُلْقُومَ﴾</span>
+                <span class="meaning-part"><strong>الحلقوم :</strong> الحلق (وهو مجرى النَّفَس عند خروج الروح للموت).</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿وَأَنتُمْ حِينَئِذٍ تَنظُرُونَ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿وَنَحْنُ أَقْرَبُ إِلَيْهِ مِنكُمْ وَلَٰكِن لَّا تُبْصِرُونَ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَلَوْلَا إِن كُنتُمْ غَيْرَ مَدِينِينَ﴾</span>
+                <span class="meaning-part"><strong>غير مدينين :</strong> غير محاسبين ولا مجزيين بأعمالكم بعد الموت.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿تَرْجِعُونَهَا إِن كُنتُمْ صَادِقِينَ﴾</span>
+                <span class="meaning-part"><strong>ترجعونها :</strong> تردون الروح إلى الجسد بعد بلوغها الحلقوم.</span>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- ================ القسم السابع: مصير الناس بعد الموت ================ -->
+        <div class="section-title"><i class="fas fa-scale-balanced"></i> مصير الناس بعد الموت</div>
+        
+        <div class="meanings-grid">
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَأَمَّا إِن كَانَ مِنَ الْمُقَرَّبِينَ﴾</span>
+                <span class="meaning-part"><strong>المقربين :</strong> السابقين إلى الخيرات والطاعات.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَرَوْحٌ وَرَيْحَانٌ وَجَنَّتُ نَعِيمٍ﴾</span>
+                <span class="meaning-part"><strong>رَوح :</strong> راحة ورحمة واستراحة من غم الدنيا.<br><strong>ريحان :</strong> رزق حسن، وقيل: نبات طيب الرائحة.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿وَأَمَّا إِن كَانَ مِنْ أَصْحَابِ الْيَمِينِ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَسَلَامٌ لَّكَ مِنْ أَصْحَابِ الْيَمِينِ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿وَأَمَّا إِن كَانَ مِنَ الْمُكَذِّبِينَ الضَّالِّينَ﴾</span>
+                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَنُزُلٌ مِّنْ حَمِيمٍ﴾</span>
+                <span class="meaning-part"><strong>نُزل :</strong> ضيافة وما يُعَدّ لاستقبالهم.<br><strong>حميم :</strong> ماء شديد الغليان والحرارة.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿وَتَصْلِيَةُ جَحِيمٍ﴾</span>
+                <span class="meaning-part"><strong>تصلية جحيم :</strong> احتراق ومقاساة لحر نار جهنم وإدخال فيها.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿إِنَّ هَٰذَا لَهُوَ حَقُّ الْيَقِينِ﴾</span>
+                <span class="meaning-part"><strong>حق اليقين :</strong> الحق الثابت الذي لا شك فيه ولا ريب.</span>
+            </div>
+            
+            <div class="meaning-item">
+                <span class="aya-part">﴿فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظِيمِ﴾</span>
+                <span class="meaning-part"><strong>فسبّح :</strong> نزِّه ربك وعظّمه (كما سبق).</span>
             </div>
         </div>
 
@@ -900,7 +924,7 @@
         
         <footer>
             <i class="fas fa-quran" style="color: #e68a2e;"></i> 
-            تم بحمد الله - تفسير سورة الواقعة كاملاً 
+            تم بحمد الله - تفسير آيات من سورة الواقعة 
             <i class="fas fa-star" style="color: #e68a2e;"></i>
             <br>نسأل الله أن ينفع به ويتقبله خالصاً لوجهه الكريم
         </footer>
@@ -922,8 +946,8 @@
 
         // تنفيذ بعد تحميل الصفحة
         window.addEventListener('load', function() {
-            console.log('✅ تفسير سورة الواقعة جاهز');
+            console.log('✅ تفسير آيات سورة الواقعة جاهز');
         });
     </script>
 </body>
-  </html>
+                                       </html>

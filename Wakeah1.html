@@ -2,1021 +2,580 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
-    <title>تفسير سورة الحاقة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شهادة تقدير - الاعتكاف ١٤٤٧</title>
     <!-- الخطوط العربية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-        /* ===== المتغيرات العامة ===== */
-        :root {
-            --primary-dark: #0b3b5c;
-            --primary-medium: #1f5f8e;
-            --primary-light: #4a89b9;
-            --primary-soft: #e8f0fe;
-            --accent-warm: #e68a2e;
-            --accent-soft: #f7e9d7;
-            --accent-border: #f1d5a0;
-            --neutral-white: #ffffff;
-            --neutral-bg: #f8f9fa;
-            --neutral-border: #dee2e6;
-            --text-dark: #1e2f4a;
-            --text-medium: #2c3e50;
-            --text-soft: #4f6579;
-            --shadow-sm: 0 4px 10px rgba(0, 45, 80, 0.08);
-            --shadow-md: 0 12px 24px rgba(0, 60, 120, 0.15);
-            --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.3);
-            --gradient-bg: linear-gradient(145deg, #eef2f7 0%, #d9e2ef 100%);
-            --gradient-progress: linear-gradient(90deg, #e68a2e, #f0b27a);
-            --border-radius-lg: 40px;
-            --border-radius-md: 30px;
-            --border-radius-sm: 20px;
-            --border-radius-xs: 15px;
-            --transition-default: all 0.3s ease;
-            
-            /* أحجام الخطوط المتغيرة */
-            --font-size-xl: clamp(2rem, 5vw, 3rem);
-            --font-size-lg: clamp(1.4rem, 4vw, 2rem);
-            --font-size-md: clamp(1.1rem, 3vw, 1.4rem);
-            --font-size-sm: clamp(0.9rem, 2.5vw, 1.1rem);
-            --font-size-xs: clamp(0.8rem, 2vw, 0.9rem);
-            
-            /* المسافات المتغيرة */
-            --spacing-xs: clamp(5px, 2vw, 10px);
-            --spacing-sm: clamp(10px, 3vw, 15px);
-            --spacing-md: clamp(15px, 4vw, 25px);
-            --spacing-lg: clamp(20px, 5vw, 40px);
-            --spacing-xl: clamp(30px, 6vw, 50px);
-        }
-
-        /* ===== إعدادات أساسية ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Cairo', sans-serif;
-            background: var(--gradient-bg);
-            color: var(--text-dark);
-            line-height: 1.6;
+            background: linear-gradient(145deg, #1a3b5c 0%, #2a4a6e 100%);
             min-height: 100vh;
-            padding: var(--spacing-md);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
 
         /* ===== الحاوية الرئيسية ===== */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: var(--neutral-white);
-            box-shadow: var(--shadow-md);
-            border-radius: var(--border-radius-lg);
-            overflow: hidden;
-            padding: var(--spacing-xl);
-            border: 1px solid rgba(0, 105, 150, 0.15);
-            transition: var(--transition-default);
+            max-width: 1000px;
             width: 100%;
         }
 
-        .container:hover {
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* ===== تنسيقات الطباعة المحسنة ===== */
-        @media print {
-            body {
-                background: white;
-                padding: 0.5cm;
-            }
-            
-            .container {
-                box-shadow: none;
-                border: 1px solid #b0c4de;
-                border-radius: 0;
-                padding: 1cm;
-                max-width: 100%;
-                margin: 0 auto;
-            }
-            
-            .no-print {
-                display: none !important;
-            }
-            
-            .aya-text {
-                font-size: 18pt !important;
-                line-height: 1.6 !important;
-                page-break-inside: avoid;
-            }
-            
-            .meaning-item {
-                break-inside: avoid;
-                page-break-inside: avoid;
-            }
-            
-            .aya-card {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-            
-            h1, h2, h3, .section-title {
-                page-break-after: avoid;
-            }
-            
-            /* فواصل الصفحات الذكية */
-            .page-break {
-                page-break-before: always;
-                break-before: page;
-                margin-top: 2cm;
-            }
-            
-            .page-break-avoid {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-            
-            /* تجنب فصل العناوين عن المحتوى */
-            h1, h2, h3, h4, .section-title, .subhead {
-                page-break-after: avoid;
-            }
-            
-            /* تحسين الهوامش للطباعة */
-            @page {
-                margin: 2cm;
-                size: A4;
-            }
-            
-            @page :first {
-                margin-top: 3cm;
-            }
-        }
-
-        /* ===== فواصل الصفحات للشاشة ===== */
-        .page-break {
-            display: block;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
-            margin: var(--spacing-xl) 0;
-        }
-        
-        @media screen {
-            .page-break {
-                display: none;
-            }
-        }
-
-        /* ===== العناوين الرئيسية ===== */
-        h1 {
-            font-size: var(--font-size-xl);
-            color: var(--primary-dark);
-            text-align: center;
-            margin-bottom: var(--spacing-sm);
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            text-shadow: 2px 2px 4px rgba(0, 60, 100, 0.1);
-            position: relative;
-            padding-bottom: var(--spacing-md);
+        /* ===== قسم الإدخال ===== */
+        .input-section {
+            background: white;
+            border-radius: 60px 60px 30px 30px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            border: 2px solid #e68a2e;
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 20px;
             flex-wrap: wrap;
+        }
+
+        .input-section label {
+            font-size: 1.3rem;
+            color: #0b3b5c;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
             gap: 10px;
         }
 
-        h1::after {
+        .input-section label i {
+            color: #e68a2e;
+            font-size: 1.5rem;
+        }
+
+        .input-section input {
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.3rem;
+            padding: 12px 25px;
+            border: 2px solid #1f5f8e;
+            border-radius: 50px;
+            width: 350px;
+            max-width: 100%;
+            background: #f8f9fa;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .input-section input:focus {
+            outline: none;
+            border-color: #e68a2e;
+            box-shadow: 0 0 15px rgba(230, 138, 46, 0.3);
+        }
+
+        .print-btn {
+            background: #1f5f8e;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            border: 2px solid transparent;
+        }
+
+        .print-btn:hover {
+            background: #12406b;
+            transform: scale(1.05);
+            border-color: #e68a2e;
+        }
+
+        /* ===== شهادة التقدير ===== */
+        .certificate {
+            background: white;
+            border-radius: 60px 60px 30px 30px;
+            padding: 50px 60px;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #e68a2e;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(230, 138, 46, 0.03) 0%, transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(31, 95, 142, 0.03) 0%, transparent 30%);
+        }
+
+        /* الزخارف الإسلامية */
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: linear-gradient(90deg, #e68a2e, #1f5f8e, #e68a2e);
+        }
+
+        .certificate::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 15px;
+            background: linear-gradient(90deg, #1f5f8e, #e68a2e, #1f5f8e);
+        }
+
+        .border-pattern {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px dashed #e68a2e;
+            border-radius: 40px 40px 20px 20px;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .corner-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 3px solid #e68a2e;
+            opacity: 0.2;
+        }
+
+        .corner-1 {
+            top: 30px;
+            right: 30px;
+            border-left: none;
+            border-bottom: none;
+            border-radius: 0 30px 0 0;
+        }
+
+        .corner-2 {
+            top: 30px;
+            left: 30px;
+            border-right: none;
+            border-bottom: none;
+            border-radius: 30px 0 0 0;
+        }
+
+        .corner-3 {
+            bottom: 30px;
+            right: 30px;
+            border-left: none;
+            border-top: none;
+            border-radius: 0 0 30px 0;
+        }
+
+        .corner-4 {
+            bottom: 30px;
+            left: 30px;
+            border-right: none;
+            border-top: none;
+            border-radius: 0 0 0 30px;
+        }
+
+        /* محتوى الشهادة */
+        .certificate-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .bismillah {
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
+            color: #1f5f8e;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .cert-title {
+            font-size: 3rem;
+            color: #0b3b5c;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .cert-title::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: min(150px, 30%);
+            width: 150px;
             height: 4px;
-            background: var(--gradient-progress);
+            background: linear-gradient(90deg, #e68a2e, #1f5f8e, #e68a2e);
             border-radius: 2px;
         }
 
-        .subhead {
-            text-align: center;
-            font-size: var(--font-size-md);
-            color: var(--primary-medium);
-            margin-bottom: var(--spacing-lg);
-            padding-bottom: var(--spacing-md);
-            border-bottom: 3px solid #a0c6e9;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .subhead i {
-            font-size: clamp(1.4rem, 4vw, 1.8rem);
-            color: var(--accent-warm);
-        }
-
-        /* ===== بطاقات الآيات ===== */
-        .aya-card {
-            background: var(--primary-soft);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md) var(--border-radius-md) var(--border-radius-md) 5px;
-            margin: var(--spacing-lg) 0 var(--spacing-md);
-            border-right: 8px solid var(--primary-medium);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-default);
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .aya-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .aya-text {
-            font-family: 'Amiri', serif;
-            font-size: clamp(1.4rem, 5vw, 2.2rem);
-            line-height: 1.8;
-            text-align: center;
-            color: var(--primary-dark);
-            margin-bottom: var(--spacing-md);
-            word-spacing: 2px;
-            font-weight: 700;
-            position: relative;
-            padding: var(--spacing-sm);
-            white-space: normal;
-            word-break: break-word;
-        }
-
-        .aya-text::before,
-        .aya-text::after {
-            font-family: 'Amiri', serif;
-            font-size: clamp(2rem, 6vw, 3rem);
-            color: var(--primary-light);
-            opacity: 0.5;
-            margin: 0 5px;
-        }
-
-        .aya-text::before {
-            content: '{';
-        }
-
-        .aya-text::after {
-            content: '}';
-        }
-
-        /* ===== أقسام المعاني ===== */
-        .section-title {
-            font-size: clamp(1.6rem, 4vw, 2.2rem);
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-top: var(--spacing-xl);
-            margin-bottom: var(--spacing-md);
-            padding-right: var(--spacing-sm);
-            border-right: 6px solid var(--accent-warm);
-            position: relative;
-            word-break: break-word;
-        }
-
-        .section-subtitle {
-            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+        .cert-subtitle {
+            font-size: 1.6rem;
+            color: #1f5f8e;
+            margin: 20px 0 15px;
             font-weight: 600;
-            color: var(--primary-medium);
-            margin: var(--spacing-md) 0 var(--spacing-sm);
-            background: var(--accent-soft);
+        }
+
+        .cert-icon {
+            font-size: 4rem;
+            color: #e68a2e;
+            margin: 15px 0;
+            text-shadow: 0 5px 15px rgba(230, 138, 46, 0.3);
+        }
+
+        .cert-year {
+            font-size: 2rem;
+            color: #0b3b5c;
+            margin-bottom: 25px;
+            background: #f7e9d7;
             display: inline-block;
-            padding: 5px 20px;
+            padding: 10px 40px;
             border-radius: 50px;
-            border: 1px solid var(--accent-border);
+            font-weight: 700;
+            border: 2px solid #e68a2e;
+        }
+
+        .cert-text {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin: 25px 0;
+            line-height: 2;
+        }
+
+        .student-name-container {
+            background: #e8f0fe;
+            padding: 25px 40px;
+            border-radius: 80px;
+            margin: 25px 0;
+            border: 3px solid #1f5f8e;
+            display: inline-block;
+            min-width: 400px;
             max-width: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .student-name {
+            font-family: 'Scheherazade New', serif;
+            font-size: 3.5rem;
+            color: #0b3b5c;
+            font-weight: 700;
+            line-height: 1.3;
             word-break: break-word;
         }
 
-        /* ===== شبكة المعاني ===== */
-        .meanings-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--spacing-sm);
-            margin: var(--spacing-sm) 0 var(--spacing-md);
-        }
-
-        .meaning-item {
-            background: var(--accent-soft);
-            padding: var(--spacing-md);
-            border-radius: var(--border-radius-sm);
-            border: 1px solid var(--accent-border);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-            transition: var(--transition-default);
-            height: fit-content;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .meaning-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .meaning-item .aya-part {
-            font-family: 'Amiri', serif;
-            font-size: var(--font-size-lg);
-            color: var(--primary-dark);
+        .student-name-placeholder {
+            font-family: 'Scheherazade New', serif;
+            font-size: 3rem;
+            color: #b13e3e;
             font-weight: 700;
-            min-width: 200px;
-            padding-left: 15px;
-            border-left: 2px solid var(--accent-warm);
+            opacity: 0.3;
+            font-style: italic;
         }
 
-        .meaning-item .meaning-part {
-            color: var(--text-medium);
-            font-size: var(--font-size-md);
+        .cert-details {
+            font-size: 1.4rem;
+            color: #4f6579;
+            margin: 30px 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cert-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e68a2e;
+            position: relative;
+        }
+
+        .signature {
+            text-align: center;
             flex: 1;
         }
 
-        .meaning-item .meaning-part strong {
-            color: #b13e3e;
+        .signature-line {
+            width: 200px;
+            height: 2px;
+            background: #1f5f8e;
+            margin: 10px auto;
+            opacity: 0.5;
+        }
+
+        .signature-title {
+            font-size: 1.2rem;
+            color: #4f6579;
+            margin-bottom: 5px;
+        }
+
+        .signature-name {
+            font-size: 1.3rem;
+            color: #0b3b5c;
             font-weight: 700;
-            margin-left: 5px;
         }
 
-        /* ===== التفسير ===== */
-        .interpretation {
-            background: var(--neutral-white);
-            padding: var(--spacing-md) var(--spacing-lg);
-            border-radius: var(--border-radius-sm);
-            margin: var(--spacing-sm) 0 var(--spacing-md);
-            border: 1px solid #b9d7f0;
-            box-shadow: inset 0 1px 3px #d4e2f0;
-            font-size: var(--font-size-sm);
-            position: relative;
-            overflow: hidden;
-            word-break: break-word;
-        }
-
-        .interpretation::before {
-            content: '📘';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.5rem;
-            opacity: 0.2;
-            pointer-events: none;
-        }
-
-        /* ===== صناديق المعلومات ===== */
-        .insight-box {
-            background: #d4e6f5;
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius-md) 10px var(--border-radius-md) 10px;
-            margin: var(--spacing-lg) 0;
-            border: 2px dashed var(--primary-medium);
-            position: relative;
-            word-break: break-word;
-        }
-
-        .insight-box p {
-            font-size: var(--font-size-md);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .insight-box i {
-            color: var(--primary-medium);
-            font-weight: bold;
-        }
-
-        /* ===== الشارات ===== */
-        .badge {
-            background: var(--accent-warm);
-            color: #1a2b3c;
-            font-weight: 700;
-            padding: 5px 15px;
-            border-radius: 30px;
-            display: inline-block;
-            margin-bottom: var(--spacing-sm);
-            font-size: clamp(1.1rem, 3vw, 1.4rem);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            word-break: break-word;
-        }
-
-        /* ===== معلومات اختصار الطباعة ===== */
-        .print-shortcut-info {
-            background: #cfdee9;
-            color: #113750;
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-radius: 40px;
-            display: inline-block;
-            font-size: var(--font-size-xs);
-            margin-bottom: var(--spacing-sm);
+        .date {
+            font-size: 1.3rem;
+            color: #0b3b5c;
             font-weight: 600;
-            border: 1px solid #6d8eac;
-            animation: pulse 2s infinite;
-            width: fit-content;
-            max-width: 100%;
-            word-break: break-word;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-
-        .shortcut-badge {
-            background: #1e3b5a;
-            color: #f5f9ff;
-            font-family: monospace;
-            font-size: var(--font-size-xs);
-            padding: 4px 12px;
-            border-radius: 30px;
-            border: 1px solid var(--accent-warm);
-            margin: 0 5px;
-            white-space: nowrap;
-        }
-
-        /* ===== زر الطباعة ===== */
-        .button-print {
-            display: block;
-            width: fit-content;
-            margin: var(--spacing-xl) auto var(--spacing-sm);
-            background: var(--primary-medium);
-            color: white;
-            border: none;
-            padding: var(--spacing-sm) var(--spacing-lg);
-            font-size: clamp(1rem, 3vw, 1.3rem);
+            background: #f7e9d7;
+            padding: 10px 25px;
             border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition-default);
-            box-shadow: 0 5px 10px rgba(0, 50, 90, 0.3);
-            border: 1px solid #12406b;
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
-            -webkit-tap-highlight-color: transparent;
+            border: 2px solid #e68a2e;
         }
 
-        .button-print::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
+        .stamp {
+            width: 100px;
+            height: 100px;
+            border: 3px solid #e68a2e;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .button-print:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .button-print:hover {
-            background: #12406b;
-            transform: scale(1.02);
-            box-shadow: 0 8px 16px rgba(0, 40, 70, 0.4);
-        }
-
-        .button-print:active {
-            transform: scale(0.98);
-        }
-
-        /* ===== تذييل الصفحة ===== */
-        footer {
-            margin-top: var(--spacing-xl);
-            text-align: center;
-            color: var(--text-soft);
-            font-size: var(--font-size-xs);
-            border-top: 1px solid #b6ccda;
-            padding-top: var(--spacing-sm);
-            word-break: break-word;
-        }
-
-        /* ===== خط فاصل ===== */
-        hr {
-            border: 1px solid #b3d2f0;
-            margin: var(--spacing-lg) 0;
-            width: 100%;
-        }
-
-        /* ===== شارة الأرقام ===== */
-        .number-badge {
-            background: var(--accent-warm);
-            color: white;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            min-width: 30px;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            margin-left: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 1.2rem;
+            color: #e68a2e;
+            font-weight: 700;
+            transform: rotate(-15deg);
+            opacity: 0.7;
+            background: rgba(255,255,255,0.9);
+            margin: 0 auto;
+        }
+
+        .stamp i {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .stamp-content {
+            text-align: center;
+        }
+
+        /* ===== تنسيقات الطباعة ===== */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            .input-section {
+                display: none !important;
+            }
+            
+            .certificate {
+                box-shadow: none;
+                border: 2px solid #e68a2e;
+                padding: 40px 50px;
+            }
+            
+            .student-name {
+                font-size: 3rem;
+            }
+            
+            @page {
+                size: A4 landscape;
+                margin: 1cm;
+            }
         }
 
         /* ===== تحسينات للموبايل ===== */
         @media (max-width: 768px) {
-            .meaning-item {
+            .certificate {
+                padding: 30px 20px;
+            }
+            
+            .cert-title {
+                font-size: 2.2rem;
+            }
+            
+            .student-name-container {
+                min-width: 250px;
+                padding: 15px 20px;
+            }
+            
+            .student-name {
+                font-size: 2.5rem;
+            }
+            
+            .cert-footer {
                 flex-direction: column;
-                gap: 5px;
+                gap: 30px;
             }
             
-            .meaning-item .aya-part {
-                border-left: none;
-                border-bottom: 2px solid var(--accent-warm);
-                padding-bottom: 5px;
-                margin-bottom: 5px;
-                min-width: 100%;
+            .date {
+                order: -1;
             }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 8px;
-            }
-            
-            .container {
-                padding: var(--spacing-md);
-                border-radius: 25px;
-            }
-            
-            .aya-card {
-                padding: var(--spacing-md);
-                border-right-width: 6px;
-            }
-            
-            .meaning-item {
-                padding: var(--spacing-sm);
-            }
-            
-            .shortcut-badge {
-                white-space: normal;
-                display: inline-block;
-                margin: 5px 0;
-            }
-            
-            .print-shortcut-info {
-                text-align: center;
-                width: 100%;
-            }
-        }
-
-        /* ===== تحسينات للشاشات الكبيرة ===== */
-        @media (min-width: 1400px) {
-            .container {
-                max-width: 1400px;
-            }
-        }
-
-        /* ===== تحسينات اللمس للموبايل ===== */
-        @media (hover: none) and (pointer: coarse) {
-            .aya-card:hover,
-            .meaning-item:hover,
-            .button-print:hover {
-                transform: none;
-            }
-            
-            .button-print {
-                padding: 15px 40px;
-            }
-        }
-
-        /* ===== تحسينات للقراءة ===== */
-        ::selection {
-            background: var(--accent-warm);
-            color: white;
-        }
-
-        /* ===== سكرول مخصص ===== */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--primary-soft);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-medium);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-dark);
-        }
-
-        /* ===== أنيميشن خفيف ===== */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .aya-card, .section-title, .meaning-item {
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        /* منع تجاوز النص */
-        p, h1, h2, h3, h4, .aya-text {
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto;
-            hyphens: auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- العنوان الرئيسي -->
-        <h1>
-            <i class="fas fa-quran" style="color: #e68a2e;"></i> 
-            تفسير سورة الحاقة 
-            <i class="fas fa-star" style="color: #e68a2e;"></i>
-        </h1>
-        <div class="subhead">
-            <i class="fas fa-book-open"></i> 
-            الحاقة - عذاب الأمم - أهوال القيامة - جزاء المؤمنين والكافرين
+        <!-- قسم الإدخال -->
+        <div class="input-section no-print">
+            <label>
+                <i class="fas fa-user-pen"></i>
+                اسم الطالب:
+            </label>
+            <input type="text" id="studentNameInput" placeholder="أدخل اسم الطالب هنا" value="محمد أحمد">
+            <button class="print-btn" onclick="updateName()">
+                <i class="fas fa-check-circle"></i>
+                تطبيق الاسم
+            </button>
+            <button class="print-btn" onclick="window.print()" style="background: #e68a2e;">
+                <i class="fas fa-print"></i>
+                طباعة PDF
+            </button>
         </div>
 
-        <!-- معلومات اختصار الطباعة -->
-        <div class="print-shortcut-info no-print">
-            <i class="fas fa-keyboard"></i> 
-            <span class="shortcut-badge">Ctrl + Alt + 2</span> 
-            ← لفتح نافذة الطباعة وحفظ PDF
-        </div>
-
-        <!-- ================ القسم الأول: مقدمة عن الحاقة ================ -->
-        <div class="section-title"><i class="fas fa-question-circle"></i> مقدمة عن الحاقة</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿الْحَاقَّةُ﴾</span>
-                <span class="meaning-part"><strong>الحاقة :</strong> يوم القيامة (وسُميت بذلك لأنها تُحِقُّ وتُظهِر حقائق الأمور ووعد الله).</span>
-            </div>
+        <!-- شهادة التقدير -->
+        <div class="certificate" id="certificate">
+            <div class="border-pattern"></div>
+            <div class="corner-decoration corner-1"></div>
+            <div class="corner-decoration corner-2"></div>
+            <div class="corner-decoration corner-3"></div>
+            <div class="corner-decoration corner-4"></div>
             
-            <div class="meaning-item">
-                <span class="aya-part">﴿مَا الْحَاقَّةُ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير (وهو أسلوب تعظيم وتهويل ليوم القيامة).</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَمَا أَدْرَاكَ مَا الْحَاقَّةُ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم الثاني: عذاب الأمم السابقة ================ -->
-        <div class="section-title"><i class="fas fa-history"></i> عذاب الأمم السابقة</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿كَذَّبَتْ ثَمُودُ وَعَادٌ بِالْقَارِعَةِ﴾</span>
-                <span class="meaning-part"><strong>بالقارعة :</strong> بيوم القيامة (لأنها تقرع القلوب وتفزعها بأهوالها).</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَأَمَّا ثَمُودُ فَأُهْلِكُوا بِالطَّاغِيَةِ﴾</span>
-                <span class="meaning-part"><strong>بالطاغية :</strong> بالصيحة العظيمة المجاوزة للحد في الشدة، وقيل الطغيان في العذاب.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَأَمَّا عَادٌ فَأُهْلِكُوا بِرِيحٍ صَرْصَرٍ عَاتِيَةٍ﴾</span>
-                <span class="meaning-part"><strong>صرصر :</strong> شديدة البرودة، ولها صوت مدوٍّ مخيف.<br><strong>عاتية :</strong> شديدة الهبوب، تجاوزت الحد في التدمير والهلاك.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿سَخَّرَهَا عَلَيْهِمْ سَبْعَ لَيَالٍ وَثَمَانِيَةَ أَيَّامٍ حُسُومًا فَتَرَى الْقَوْمَ فِيهَا صَرْعَىٰ كَأَنَّهُمْ أَعْجَازُ نَخْلٍ خَاوِيَةٍ﴾</span>
-                <span class="meaning-part"><strong>سخّرها :</strong> سلّطها وأرسلها.<br><strong>حسوماً :</strong> متتابعة لا تنقطع، وقيل: مهلكة تستأصلهم.<br><strong>صرعى :</strong> موتى مطروحين ومُلقَين على الأرض.<br><strong>أعجاز نخل :</strong> أصول وجذوع النخل (بدون فروع).<br><strong>خاوية :</strong> فارغة مجوفة (أو ساقطة ومتهالكة).</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَهَلْ تَرَىٰ لَهُم مِّن بَاقِيَةٍ﴾</span>
-                <span class="meaning-part"><strong>من باقية :</strong> من بقية، أو من أحد حيّ.</span>
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم الثالث: عذاب فرعون ومن قبله ================ -->
-        <div class="section-title"><i class="fas fa-pyramid"></i> عذاب فرعون ومن قبله</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَجَاءَ فِرْعَوْنُ وَمَن قَبْلَهُ وَالْمُؤْتَفِكَاتُ بِالْخَاطِئَةِ﴾</span>
-                <span class="meaning-part"><strong>والمؤتفكات :</strong> قرى قوم لوط التي انقلبت بهم.<br><strong>بالخاطئة :</strong> بالأفعال ذات الخطأ العظيم (كالشرك والفواحش).</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَعَصَوْا رَسُولَ رَبِّهِمْ فَأَخَذَهُمْ أَخْذَةً رَّابِيَةً﴾</span>
-                <span class="meaning-part"><strong>رابية :</strong> زائدة في الشدة والعذاب على غيرها من العقوبات.</span>
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم الرابع: قصة نوح ================ -->
-        <div class="section-title"><i class="fas fa-ship"></i> قصة نوح عليه السلام</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿إِنَّا لَمَّا طَغَى الْمَاءُ حَمَلْنَاكُمْ فِي الْجَارِيَةِ﴾</span>
-                <span class="meaning-part"><strong>طغى :</strong> زاد وارتفع وتجاوز الحد (في طوفان نبي الله نوح).<br><strong>الجارية :</strong> السفينة.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿لِنَجْعَلَهَا لَكُمْ تَذْكِرَةً وَتَعِيَهَا أُذُنٌ وَاعِيَةٌ﴾</span>
-                <span class="meaning-part"><strong>تذكرة :</strong> عِظة وعبرة.<br><strong>وتعيها :</strong> تحفظها وتعقلها وتفهمها.<br><strong>واعية :</strong> حافظة لما تسمع، منتفعة به.</span>
+            <div class="certificate-content">
+                <!-- البسملة -->
+                <div class="bismillah">
+                    ﷽
+                </div>
+                
+                <!-- العنوان الرئيسي -->
+                <h1 class="cert-title">
+                    شهادة تقدير
+                </h1>
+                
+                <!-- الأيقونة -->
+                <div class="cert-icon">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                
+                <!-- السنة -->
+                <div class="cert-year">
+                    <i class="fas fa-star"></i>
+                    الاعتكاف ١٤٤٧ هـ
+                    <i class="fas fa-star"></i>
+                </div>
+                
+                <!-- نص الشهادة -->
+                <div class="cert-text">
+                    يشهد مركز إحياء السنة النبوية
+                </div>
+                
+                <!-- اسم الطالب (يتغير) -->
+                <div class="student-name-container">
+                    <div class="student-name" id="studentNameDisplay">محمد أحمد</div>
+                </div>
+                
+                <!-- التفاصيل -->
+                <div class="cert-details">
+                    على تميزه في الاعتكاف وإتمامه العشر الأواخر من رمضان<br>
+                    مع المداومة على الطاعات والعبادات وقيام الليل وتلاوة القرآن
+                </div>
+                
+                <!-- دعاء -->
+                <div style="font-family: 'Amiri', serif; font-size: 1.5rem; color: #1f5f8e; margin: 20px 0;">
+                    ﴿ رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ ﴾
+                </div>
+                
+                <!-- تذييل الشهادة -->
+                <div class="cert-footer">
+                    <!-- التوقيع الأول -->
+                    <div class="signature">
+                        <div class="signature-title">شيخ المركز</div>
+                        <div class="signature-line"></div>
+                        <div class="signature-name">د. أحمد بن محمد القاسم</div>
+                    </div>
+                    
+                    <!-- التاريخ -->
+                    <div class="date">
+                        <i class="fas fa-calendar-alt"></i>
+                        ٢٧ رمضان ١٤٤٧ هـ
+                    </div>
+                    
+                    <!-- التوقيع الثاني -->
+                    <div class="signature">
+                        <div class="signature-title">المشرف على الاعتكاف</div>
+                        <div class="signature-line"></div>
+                        <div class="signature-name">عبدالله بن سعد العتيبي</div>
+                    </div>
+                </div>
+                
+                <!-- ختم إضافي -->
+                <div style="display: flex; justify-content: center; margin-top: 30px;">
+                    <div class="stamp">
+                        <div class="stamp-content">
+                            <i class="fas fa-star-and-crescent"></i>
+                            <div>ختم</div>
+                            <div>المركز</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم الخامس: أهوال يوم القيامة ================ -->
-        <div class="section-title"><i class="fas fa-volcano"></i> أهوال يوم القيامة</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَإِذَا نُفِخَ فِي الصُّورِ نَفْخَةٌ وَاحِدَةٌ﴾</span>
-                <span class="meaning-part"><strong>الصور :</strong> البوق (أو القَرْن) الذي ينفخ فيه المَلَك (إسرافيل) للبعث.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَحُمِلَتِ الْأَرْضُ وَالْجِبَالُ فَدُكَّتَا دَكَّةً وَاحِدَةً﴾</span>
-                <span class="meaning-part"><strong>فدكتا :</strong> كسرتا وفتتتا بضربة واحدة وصارتا هباءً.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَيَوْمَئِذٍ وَقَعَتِ الْوَاقِعَةُ﴾</span>
-                <span class="meaning-part"><strong>الواقعة :</strong> قامت القيامة.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَانشَقَّتِ السَّمَاءُ فَهِيَ يَوْمَئِذٍ وَاهِيَةٌ﴾</span>
-                <span class="meaning-part"><strong>واهية :</strong> ضعيفة مسترخية ومتشققة بعد أن كانت شديدة التماسك.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَالْمَلَكُ عَلَىٰ أَرْجَائِهَا ۚ وَيَحْمِلُ عَرْشَ رَبِّكَ فَوْقَهُمْ يَوْمَئِذٍ ثَمَانِيَةٌ﴾</span>
-                <span class="meaning-part"><strong>أرجائها :</strong> أطرافها وجوانبها.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿يَوْمَئِذٍ تُعْرَضُونَ لَا تَخْفَىٰ مِنكُمْ خَافِيَةٌ﴾</span>
-                <span class="meaning-part"><strong>خافية :</strong> سريرة في القلوب، أو عمل خفي كنتم تخفونه في الدنيا.</span>
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم السادس: جزاء المؤمنين ================ -->
-        <div class="section-title"><i class="fas fa-hand-peace"></i> جزاء المؤمنين</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ فَيَقُولُ هَاؤُمُ اقْرَءُوا كِتَابِيَهْ﴾</span>
-                <span class="meaning-part"><strong>هاؤُم :</strong> خذوا وتناولوا (يقولها من شدة الفرح).</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿إِنِّي ظَنَنتُ أَنِّي مُلَاقٍ حِسَابِيَهْ﴾</span>
-                <span class="meaning-part"><strong>ظننت :</strong> أيقنت وعلمت (الظن هنا في لغة العرب يأتي بمعنى اليقين).</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ﴾</span>
-                <span class="meaning-part"><strong>راضية :</strong> مرضية يرضاها صاحبها ولا يتمنى غيرها.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فِي جَنَّةٍ عَالِيَةٍ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿قُطُوفُهَا دَانِيَةٌ﴾</span>
-                <span class="meaning-part"><strong>قطوفها :</strong> ثمارها المقطوفة.<br><strong>دانية :</strong> قريبة التناول للمتطاول والقاعد والنائم، لا تحتاج لمشقة.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿كُلُوا وَاشْرَبُوا هَنِيئًا بِمَا أَسْلَفْتُمْ فِي الْأَيَّامِ الْخَالِيَةِ﴾</span>
-                <span class="meaning-part"><strong>هنيئاً :</strong> طيباً لا تنغيص فيه ولا أذى يعقبه.<br><strong>أسلفتم :</strong> قدمتم من الأعمال الصالحة.<br><strong>الخالية :</strong> الماضية (في الدنيا).</span>
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم السابع: جزاء الكافرين ================ -->
-        <div class="section-title"><i class="fas fa-skull"></i> جزاء الكافرين</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِشِمَالِهِ فَيَقُولُ يَا لَيْتَنِي لَمْ أُوتَ كِتَابِيَهْ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَلَمْ أَدْرِ مَا حِسَابِيَهْ﴾</span>
-                <span class="meaning-part"><strong>ولم أدرِ :</strong> ولم أعلم.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿يَا لَيْتَهَا كَانَتِ الْقَاضِيَةَ﴾</span>
-                <span class="meaning-part"><strong>القاضية :</strong> الموتة التي تقطع الحياة ولا بعث ولا حساب بعدها.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿مَا أَغْنَىٰ عَنِّي مَالِيَهْ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿هَلَكَ عَنِّي سُلْطَانِيَهْ﴾</span>
-                <span class="meaning-part"><strong>سلطانيه :</strong> حجتي وقوتي، أو ملكي وسلطاني في الدنيا.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿خُذُوهُ فَغُلُّوهُ﴾</span>
-                <span class="meaning-part"><strong>فغُلُّوه :</strong> فاجمعوا يديه إلى عنقه بالأغلال والسلاسل.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿ثُمَّ الْجَحِيمَ صَلُّوهُ﴾</span>
-                <span class="meaning-part"><strong>صلُّوه :</strong> أدخلوه إياها ليحترق بحرها ويقاسي عذابها.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿ثُمَّ فِي سِلْسِلَةٍ ذَرْعُهَا سَبْعُونَ ذِرَاعًا فَاسْلُكُوهُ﴾</span>
-                <span class="meaning-part"><strong>ذرعها :</strong> طولها ومقاسها.<br><strong>فاسلكوه :</strong> فأدخلوه فيها (تُلف على جسده وتدخل فيه).</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿إِنَّهُ كَانَ لَا يُؤْمِنُ بِاللَّهِ الْعَظِيمِ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ﴾</span>
-                <span class="meaning-part"><strong>يَحُضّ :</strong> يحث ويشجع نفسه وغيره على إطعام المحتاجين.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَلَيْسَ لَهُ الْيَوْمَ هَاهُنَا حَمِيمٌ﴾</span>
-                <span class="meaning-part"><strong>حميم :</strong> قريب أو صديق مخلص يشفع له أو يدفع عنه العذاب.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَلَا طَعَامٌ إِلَّا مِنْ غِسْلِينٍ﴾</span>
-                <span class="meaning-part"><strong>غسلين :</strong> صديد وقيء ودم يسيل من أجساد أهل النار المشتعلة.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿لَّا يَأْكُلُهُ إِلَّا الْخَاطِئُونَ﴾</span>
-                <span class="meaning-part"><strong>الخاطئون :</strong> المذنبون المتعمدون للخطأ والشرك والإجرام.</span>
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم الثامن: عظمة القرآن ================ -->
-        <div class="section-title"><i class="fas fa-book"></i> عظمة القرآن الكريم</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَلَا أُقْسِمُ بِمَا تُبْصِرُونَ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَمَا لَا تُبْصِرُونَ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿إِنَّهُ لَقَوْلُ رَسُولٍ كَرِيمٍ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَمَا هُوَ بِقَوْلِ شَاعِرٍ ۚ قَلِيلًا مَّا تُؤْمِنُونَ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَلَا بِقَوْلِ كَاهِنٍ ۚ قَلِيلًا مَّا تَذَكَّرُونَ﴾</span>
-                <span class="meaning-part"><strong>كاهن :</strong> عرّاف يدّعي علم الغيب.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿تَنزِيلٌ مِّن رَّبِّ الْعَالَمِينَ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم التاسع: تحذير من تكذيب الرسول ================ -->
-        <div class="section-title"><i class="fas fa-exclamation-triangle"></i> تحذير من تكذيب الرسول</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَلَوْ تَقَوَّلَ عَلَيْنَا بَعْضَ الْأَقَاوِيلِ﴾</span>
-                <span class="meaning-part"><strong>تقوَّل علينا :</strong> افترى وكذب علينا واختلق كلاماً من تلقاء نفسه ونسبه إلينا.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿لَأَخَذْنَا مِنْهُ بِالْيَمِينِ﴾</span>
-                <span class="meaning-part"><strong>باليمين :</strong> بالقوة والقدرة (وقيل: أخذنا بيده اليمنى عقاباً له وانتقاماً).</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿ثُمَّ لَقَطَعْنَا مِنْهُ الْوَتِينَ﴾</span>
-                <span class="meaning-part"><strong>الوتين :</strong> عرق كبير متصل بالقلب، إذا انقطع مات الإنسان فوراً.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَمَا مِنكُم مِّنْ أَحَدٍ عَنْهُ حَاجِزِينَ﴾</span>
-                <span class="meaning-part"><strong>حاجزين :</strong> مانعين ودافعين لعقابنا عنه.</span>
-            </div>
-        </div>
-
-        <div class="page-break"></div>
-
-        <!-- ================ القسم العاشر: ختام السورة ================ -->
-        <div class="section-title"><i class="fas fa-flag-checkered"></i> ختام السورة</div>
-        
-        <div class="meanings-grid">
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَإِنَّهُ لَتَذْكِرَةٌ لِّلْمُتَّقِينَ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَإِنَّا لَنَعْلَمُ أَنَّ مِنكُم مُّكَذِّبِينَ﴾</span>
-                <span class="meaning-part">لا يوجد كلمات غريبة تحتاج لتفسير.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَإِنَّهُ لَحَسْرَةٌ عَلَى الْكَافِرِينَ﴾</span>
-                <span class="meaning-part"><strong>لحسرة :</strong> لندامة وغمّ شديد يوم القيامة.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿وَإِنَّهُ لَحَقُّ الْيَقِينِ﴾</span>
-                <span class="meaning-part"><strong>لحق اليقين :</strong> الحق الثابت الذي لا شك فيه ولا ريب أبدًا.</span>
-            </div>
-            
-            <div class="meaning-item">
-                <span class="aya-part">﴿فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظِيمِ﴾</span>
-                <span class="meaning-part"><strong>فسبّح :</strong> نزِّه ربك وعظّمه عن كل نقص.</span>
-            </div>
-        </div>
-
-        <!-- ================ خاتمة ================ -->
-        <hr>
-        
-        <footer>
-            <i class="fas fa-quran" style="color: #e68a2e;"></i> 
-            تم بحمد الله - تفسير سورة الحاقة كاملة 
-            <i class="fas fa-star" style="color: #e68a2e;"></i>
-            <br>نسأل الله أن ينفع به ويتقبله خالصاً لوجهه الكريم
-        </footer>
-
-        <!-- زر الطباعة الاحتياطي -->
-        <button class="button-print no-print" onclick="window.print()">
-            <i class="fas fa-print"></i> طباعة / حفظ PDF
-        </button>
     </div>
 
     <script>
-        // اختصار لوحة المفاتيح Ctrl + Alt + 2 لفتح الطباعة
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.altKey && e.key === '2') {
-                e.preventDefault();
-                window.print();
+        // دالة تحديث اسم الطالب
+        function updateName() {
+            const input = document.getElementById('studentNameInput');
+            const display = document.getElementById('studentNameDisplay');
+            const nameValue = input.value.trim();
+            
+            if (nameValue === '') {
+                display.textContent = 'الطالب/ـة المتميز';
+                display.classList.add('student-name-placeholder');
+            } else {
+                display.textContent = nameValue;
+                display.classList.remove('student-name-placeholder');
+            }
+        }
+
+        // تحديث الاسم عند تحميل الصفحة
+        window.addEventListener('load', function() {
+            updateName();
+        });
+
+        // تحديث الاسم عند الضغط على Enter
+        document.getElementById('studentNameInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                updateName();
             }
         });
 
-        // تنفيذ بعد تحميل الصفحة
-        window.addEventListener('load', function() {
-            console.log('✅ تفسير سورة الحاقة جاهز');
+        // اختصار الطباعة Ctrl + P
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
         });
     </script>
 </body>
